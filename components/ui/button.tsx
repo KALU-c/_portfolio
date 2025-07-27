@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { motion, MotionProps } from "motion/react"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer overflow-hidden",
   {
     variants: {
       variant: {
@@ -22,7 +22,8 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline",
+        link: "text-primary bg-transparent hover:bg-transparent underline-offset-4 hover:underline", // FIXME
+        transparent: "text-primary bg-transparent hover:bg-transparent",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
@@ -62,16 +63,54 @@ function Button({
 const FramerMotionButton = motion.create(Button);
 
 function MotionButton({
+  className,
+  children,
+  variant,
+  size,
   ...props
 }: React.ComponentProps<"button"> & MotionProps & VariantProps<typeof buttonVariants> & {
-  asChild?: boolean
+  asChild?: boolean,
+  children?: string | React.ReactNode
 }) {
   return (
     <FramerMotionButton
-      whileTap={{ scale: 0.75 }}
       data-slot="button"
+      initial="initial"
+      whileHover="hovered"
+      whileTap={{ scale: 0.75 }}
+      className={cn(buttonVariants({ variant, size, className }))}
       {...props}
-    />
+    >
+      <div className="relative overflow-hidden h-fit inset-0">
+        <motion.div
+          variants={{
+            initial: { y: 0 },
+            hovered: { y: "-100%" },
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.3
+          }}
+          className="flex items-center justify-center inset-0"
+        >
+          {children}
+        </motion.div>
+
+        <motion.div
+          variants={{
+            initial: { y: "100%" },
+            hovered: { y: 0 }
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.3
+          }}
+          className="absolute inset-0 flex items-center justify-center overflow-hidden"
+        >
+          {children}
+        </motion.div>
+      </div>
+    </FramerMotionButton>
   )
 }
 
