@@ -23,13 +23,14 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary bg-transparent hover:bg-transparent underline-offset-4 hover:underline", // FIXME
-        transparent: "text-primary bg-transparent hover:bg-transparent",
+        transparent: "text-primary bg-transparent hover:bg-transparent p-0 shadow-none rounded-none",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
         icon: "size-9",
+        noPadding: "p-0 h-auto",
       },
     },
     defaultVariants: {
@@ -67,10 +68,12 @@ function MotionButton({
   children,
   variant,
   size,
+  textClassName, //FIXME
   ...props
 }: React.ComponentProps<"button"> & MotionProps & VariantProps<typeof buttonVariants> & {
   asChild?: boolean,
   children?: string | React.ReactNode
+  textClassName?: React.ComponentProps<"div">["className"]
 }) {
   return (
     <FramerMotionButton
@@ -91,7 +94,7 @@ function MotionButton({
             ease: "easeInOut",
             duration: 0.3
           }}
-          className="flex items-center justify-center inset-0"
+          className={cn("flex items-center justify-center inset-0", textClassName)}
         >
           {children}
         </motion.div>
@@ -105,7 +108,7 @@ function MotionButton({
             ease: "easeInOut",
             duration: 0.3
           }}
-          className="absolute inset-0 flex items-center justify-center overflow-hidden"
+          className={cn("absolute inset-0 flex items-center justify-center overflow-hidden", textClassName)}
         >
           {children}
         </motion.div>
