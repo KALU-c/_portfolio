@@ -132,3 +132,8 @@
     @apply flex items-center justify-between;
   }
 }
+
+::selection {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
