@@ -1,3 +1,4 @@
+import LogoMarquee from "@/components/LogoMarquee";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/sections/Hero";
 
@@ -7,6 +8,8 @@ export default function Home() {
       <NavBar />
       <div className="pt-[120px]">
         <Hero />
+
+        <LogoMarquee />
       </div>
 
       <div className="min-h-dvh flex-center gap-4">test</div>
