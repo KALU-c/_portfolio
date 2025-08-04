@@ -31,10 +31,11 @@ const logos = [
 	'/logo/typescript.svg',
 ]
 
+// TODO - make the selection background transparent
 const LogoMarquee = () => {
 	return (
 		<div className="relative py-4 overflow-hidden rounded-xl">
-			<div className="pointer-events-none absolute inset-0 z-20 flex justify-between">
+			<div className="absolute inset-0 z-20 flex justify-between">
 				<div className="w-60 h-full bg-gradient-to-r from-background to-transparent" />
 				<div className="w-60 h-full bg-gradient-to-l from-background to-transparent" />
 			</div>
@@ -67,7 +68,7 @@ const LogoMarquee = () => {
 						<Image
 							src={logo}
 							alt={`${logo}-${index}`}
-							className="h-8 w-8 mr-10"
+							className="h-8 w-8 mr-10 sepia opacity-40"
 							width={50}
 							height={50}
 							key={index}
