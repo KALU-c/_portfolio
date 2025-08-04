@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <Lenis>
         <body
-          className={`${InterSans.className} antialiased md:px-[50px] xl:px-[170px] px-3`}
+          className={`${InterSans.className} antialiased md:px-[50px] xl:px-[180px] px-3`}
         >
           {children}
         </body>

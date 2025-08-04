@@ -1,27 +1,117 @@
+"use client"
+
 import { Button, MotionButton } from "@/components/ui/button";
+import { navItems } from "@/constants/nav-items";
 import { Plus } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 
 const NavBar = () => {
 	const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', hour12: true }
 	const today = new Date();
 
-	return (
-		<nav className="h-[45px] bg-muted/80 backdrop-blur-sm rounded-b-2xl p-[6px] sticky top-0 z-50 flex-between">
-			<div className="flex-center gap-2 xl:px-2">
-				<h1 className="text-lg font-medium tracking-tighter">Kalu&reg;</h1>
-				<p className="text-muted-dark text-sm">{today.toLocaleString("en-US", options)}</p>
-			</div>
+	const [isOpen, setIsOpen] = useState(false);
 
-			<div className="flex-center gap-4">
-				<div className="hidden gap-4 md:flex">
-					<MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">About</MotionButton>
-					<MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Projects</MotionButton>
-					<MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Blog</MotionButton>
-					<MotionButton textClassName="text-[14px]" className="rounded-full h-7">Start a projects</MotionButton>
+	return (
+		<>
+			{/* Overlay */}
+			<AnimatePresence>
+				{isOpen && (
+					<motion.div
+						key={"overlay"}
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 0.5, height: "100%" }}
+						exit={{ opacity: 0 }}
+						transition={{ duration: 0.3 }}
+						className="fixed inset-0 bg-black z-40 cursor-pointer"
+						onClick={() => setIsOpen(false)}
+					/>
+				)}
+			</AnimatePresence>
+
+			<motion.nav
+				animate={{ height: isOpen ? "485px" : "45px" }}
+				transition={{ ease: "easeInOut", duration: 0.5 }}
+				exit={{ animationDuration: 0.1 }}
+				className="h-[45px] bg-muted/90 backdrop-blur-sm rounded-b-2xl p-[6px] top-0 z-50 absolute inset-0 md:mx-[50px] xl:mx-[180px] mx-3 flex flex-col justify-between"
+			>
+				<div className="flex-between">
+					<div className="flex-center gap-2 xl:px-2">
+						<h1 className="text-lg font-medium tracking-tighter">Kalu&reg;</h1>
+						<p className="text-muted-dark text-sm">{today.toLocaleString("en-US", options)}</p>
+					</div>
+
+					<div className="flex-center gap-4">
+						<div className="hidden gap-4 md:flex">
+							<AnimatePresence>
+								{!isOpen && (
+									<motion.div
+										initial={{ opacity: 1 }}
+										exit={{ opacity: 0 }}
+										transition={{ duration: 0.3 }}
+										className="flex gap-4"
+									>
+										<MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">About</MotionButton>
+										<MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Projects</MotionButton>
+										<MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Blog</MotionButton>
+									</motion.div>
+								)}
+							</AnimatePresence>
+							<MotionButton textClassName="text-[14px]" className="rounded-full h-7">Start a projects</MotionButton>
+						</div>
+						<Button size={"icon"} className="bg-white rounded-full p-0 hover:bg-white" onClick={() => setIsOpen(!isOpen)}><Plus color="#000" size={24} /></Button>
+					</div>
 				</div>
-				<Button size={"icon"} className="bg-white rounded-full p-0 hover:bg-white"><Plus color="#000" size={24} /></Button>
-			</div>
-		</nav>
+
+				<AnimatePresence>
+					{isOpen && (
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ duration: 1, delay: 0.5 }}
+							className="px-4 flex flex-col justify-between flex-1 pb-4"
+						>
+							<div className="flex flex-row justify-between items-center gap-8 py-8">
+								<ul className="flex flex-col gap-2 flex-1">
+									{navItems.map((item, index) => (
+										<li
+											key={index}
+											className="py-2 border-b-1 border-b-zinc-400 text-2xl tracking-tight font-semibold flex flex-row justify-between items-center"
+										>
+											{item.label}
+											<span className="text-muted-dark text-sm">(0{index + 1})</span>
+										</li>
+									))}
+								</ul>
+
+								<div className="relative h-[275px] w-[725px] flex-1 rounded-2xl overflow-hidden">
+									{/* Dark overlay */}
+									<div className="absolute inset-0 bg-black opacity-30 z-10" />
+
+									{/* Background image */}
+									<img
+										src="https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg"
+										className="absolute inset-0 w-full h-full object-cover"
+									/>
+								</div>
+
+							</div>
+							<div className="flex flex-row justify-between items-end">
+								<div className="flex flex-col">
+									<p className="text-lg font-medium">realkal.ez@gmail.com</p>
+									<p className="text-sm text-muted-dark">+251 934 898 608</p>
+								</div>
+								<div className="flex flex-row gap-3">
+									<p className="text-sm">Twitter/X</p>
+									<p className="text-sm">LinkedIn</p>
+									<p className="text-sm">Telegram</p>
+								</div>
+							</div>
+						</motion.div>
+					)}
+				</AnimatePresence>
+			</motion.nav>
+		</>
 	)
 }
 
