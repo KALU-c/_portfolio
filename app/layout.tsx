@@ -1,3 +1,4 @@
+import { Lenis } from "@/lib/lenis";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -19,11 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${InterSans.className} antialiased md:px-[50px] xl:px-[170px] px-3`}
-      >
-        {children}
-      </body>
+      <Lenis>
+        <body
+          className={`${InterSans.className} antialiased md:px-[50px] xl:px-[170px] px-3`}
+        >
+          {children}
+        </body>
+      </Lenis>
     </html>
   );
 }
