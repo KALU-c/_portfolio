@@ -4,7 +4,9 @@ import { Button, MotionButton } from "@/components/ui/button";
 import { navItems } from "@/constants/nav-items";
 import { Plus } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 import { useState } from "react";
+import FlipText, { FlipMultipleText } from "./FlipText";
 
 const NavBar = () => {
 	const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', hour12: true }
@@ -33,7 +35,7 @@ const NavBar = () => {
 				animate={{ height: isOpen ? "485px" : "45px" }}
 				transition={{ ease: "easeInOut", duration: 0.5 }}
 				exit={{ animationDuration: 0.1 }}
-				className="h-[45px] bg-muted/90 backdrop-blur-sm rounded-b-2xl p-[6px] top-0 z-50 absolute inset-0 md:mx-[50px] xl:mx-[180px] mx-3 flex flex-col justify-between"
+				className="h-[45px] bg-muted/90 backdrop-blur-sm rounded-b-2xl p-[6px] top-0 z-50 fixed inset-0 md:mx-[50px] xl:mx-[180px] mx-3 flex flex-col justify-between"
 			>
 				<div className="flex-between">
 					<div className="flex-center gap-2 xl:px-2">
@@ -76,10 +78,14 @@ const NavBar = () => {
 									{navItems.map((item, index) => (
 										<li
 											key={index}
-											className="py-2 border-b-1 border-b-zinc-400 text-2xl tracking-tight font-semibold flex flex-row justify-between items-center"
+											className="py-2 border-b-1 border-b-zinc-400 tracking-tight font-semibold flex flex-row justify-between items-center"
 										>
-											{item.label}
-											<span className="text-muted-dark text-sm">(0{index + 1})</span>
+											<Link href={item.link}>
+												<FlipMultipleText
+													text1={item.label}
+													className1="text-2xl"
+												/>
+											</Link>
 										</li>
 									))}
 								</ul>
@@ -98,13 +104,13 @@ const NavBar = () => {
 							</div>
 							<div className="flex flex-row justify-between items-end">
 								<div className="flex flex-col">
-									<p className="text-lg font-medium">realkal.ez@gmail.com</p>
-									<p className="text-sm text-muted-dark">+251 934 898 608</p>
+									<FlipText className="text-lg font-semibold">realkal.ez@gmail.com</FlipText>
+									<FlipText className="text-sm text-muted-dark">+251 934 898 608</FlipText>
 								</div>
 								<div className="flex flex-row gap-3">
-									<p className="text-sm">Twitter/X</p>
-									<p className="text-sm">LinkedIn</p>
-									<p className="text-sm">Telegram</p>
+									<FlipText className="text-sm">Twitter/X</FlipText>
+									<FlipText className="text-sm">LinkedIn</FlipText>
+									<FlipText className="text-sm">Telegram</FlipText>
 								</div>
 							</div>
 						</motion.div>
