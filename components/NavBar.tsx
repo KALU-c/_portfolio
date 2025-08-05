@@ -101,7 +101,7 @@ const NavBar = () => {
 									))}
 								</ul>
 
-								<div className="relative h-[275px] w-[725px] flex-1 rounded-2xl overflow-hidden">
+								<div className="relative h-[275px] w-[725px] flex-1 rounded-2xl overflow-hidden hidden md:block">
 									{/* Dark overlay */}
 									<div className="absolute inset-0 bg-black opacity-30 z-10" />
 
@@ -118,7 +118,7 @@ const NavBar = () => {
 									<FlipText className="text-lg font-semibold">realkal.ez@gmail.com</FlipText>
 									<FlipText className="text-sm text-muted-dark">+251 934 898 608</FlipText>
 								</div>
-								<div className="flex flex-row gap-3">
+								<div className="hidden md:flex flex-row gap-3">
 									<FlipText className="text-sm">Twitter/X</FlipText>
 									<FlipText className="text-sm">LinkedIn</FlipText>
 									<FlipText className="text-sm">Telegram</FlipText>

@@ -144,6 +144,10 @@
   .char {
     @apply text-[clamp(3rem,15vw,250px)] leading-none inline-block;
   }
+
+  .words-1 {
+    @apply text-5xl;
+  }
 }
 
 ::selection {
