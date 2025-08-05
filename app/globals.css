@@ -140,6 +140,10 @@
   .flex-between {
     @apply flex items-center justify-between;
   }
+
+  .char {
+    @apply text-[clamp(3rem,15vw,250px)] leading-none inline-block;
+  }
 }
 
 ::selection {
