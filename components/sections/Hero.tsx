@@ -47,7 +47,7 @@ const Hero = () => {
 						<span className="text-3xl text-muted-dark">— all in one mind.</span>
 					</div>
 
-					<span className="text-muted-dark max-w-4xl desc-2">
+					<span className="text-muted-dark max-w-4xl desc-2 overflow-hidden">
 						I love turning ideas into things people actually enjoy using. Whether it's designing clean interfaces or writing solid, maintainable code, I care about the little details that make the experience feel smooth and natural.
 					</span>
 				</div>
