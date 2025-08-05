@@ -142,15 +142,15 @@
   }
 
   .char {
-    @apply text-[clamp(3rem,15vw,250px)] leading-none inline-block;
-  }
-
-  .words-1 {
-    @apply text-5xl;
+    @apply text-[clamp(3rem,15vw,280px)] leading-none inline-block;
   }
 }
 
 ::selection {
   background-color: #0a0a0a;
   color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
