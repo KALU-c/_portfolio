@@ -2,11 +2,22 @@ import { Lenis } from "@/lib/lenis";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local"
 
 const InterSans = Inter({
   variable: "--font-inter-sans",
   subsets: ["latin"],
 });
+
+const koriumSans = localFont({
+  variable: "--font-korium",
+  src: "../public/fonts/T1Korium-2Kg.otf"
+})
+
+const telmaSans = localFont({
+  variable: "--font-telma",
+  src: "../public/fonts/Telma-Variable.ttf"
+})
 
 export const metadata: Metadata = {
   title: "KALU",
@@ -22,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <Lenis>
         <body
-          className={`${InterSans.className} antialiased md:px-[50px] xl:px-[180px] px-3`}
+          className={`${InterSans.className} ${koriumSans.variable} ${telmaSans.variable} antialiased md:px-[50px] xl:px-[180px] px-3`}
         >
           {children}
         </body>

@@ -8,22 +8,20 @@ export default function Home() {
   return (
     <main>
       <NavBar />
-      <div className="pt-[120px]">
-        <Hero />
+      <Hero />
 
-        <LogoMarquee />
+      <LogoMarquee />
 
-        <div className="py-10 grid lg:grid-cols-2 gap-6 grid-cols-1">
-          {projects.map(({ title, description, src, year }, index) => (
-            <ProjectCard
-              key={index}
-              title={title}
-              description={description}
-              src={src}
-              year={year}
-            />
-          ))}
-        </div>
+      <div className="py-10 grid lg:grid-cols-2 gap-6 grid-cols-1">
+        {projects.map(({ title, description, src, year }, index) => (
+          <ProjectCard
+            key={index}
+            title={title}
+            description={description}
+            src={src}
+            year={year}
+          />
+        ))}
       </div>
 
       <div className="min-h-dvh flex-center gap-4 bg-green-300">test</div>

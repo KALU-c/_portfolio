@@ -61,7 +61,18 @@ const NavBar = () => {
 							</AnimatePresence>
 							<MotionButton textClassName="text-[14px]" className="rounded-full h-7">Start a projects</MotionButton>
 						</div>
-						<Button size={"icon"} className="bg-white rounded-full p-0 hover:bg-white" onClick={() => setIsOpen(!isOpen)}><Plus color="#000" size={24} /></Button>
+						<Button
+							size={"icon"}
+							className="bg-white rounded-full p-0 hover:bg-white"
+							onClick={() => setIsOpen(!isOpen)}
+						>
+							<Plus
+								color="#000"
+								size={24}
+								className={`transform transition-transform duration-500 ease-in-out ${isOpen ? "-rotate-45" : "rotate-0"
+									}`}
+							/>
+						</Button>
 					</div>
 				</div>
 
