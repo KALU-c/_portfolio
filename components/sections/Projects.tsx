@@ -3,10 +3,8 @@
 import { projects } from "@/constants/projects"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { ScrollTrigger } from "gsap/all"
 import ProjectCard from "../ProjectCard"
-
-gsap.registerPlugin(ScrollTrigger);
+import { useRef } from "react"
 
 const Projects = () => {
 	useGSAP(() => {

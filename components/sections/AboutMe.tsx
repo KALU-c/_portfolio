@@ -1,16 +1,63 @@
-import { SiCss, SiDocker, SiExpress, SiFigma, SiFirebase, SiGit, SiGithub, SiGreensock, SiHostinger, SiHtml5, SiJavascript, SiJest, SiMongodb, SiMysql, SiNestjs, SiNextdotjs, SiNginx, SiNodedotjs, SiPostgresql, SiPrisma, SiReact, SiRedis, SiSqlite, SiSupabase, SiTailwindcss, SiTypescript, SiVercel } from "@icons-pack/react-simple-icons"
+"use client"
+
+import { useGSAP } from "@gsap/react"
+import {
+	SiCss,
+	SiDocker,
+	SiExpress,
+	SiFigma,
+	SiFirebase,
+	SiGit,
+	SiGithub,
+	SiGreensock,
+	SiHostinger,
+	SiHtml5,
+	SiJavascript,
+	SiJest,
+	SiMongodb,
+	SiMysql,
+	SiNestjs,
+	SiNextdotjs,
+	SiNginx,
+	SiNodedotjs,
+	SiPostgresql,
+	SiPrisma,
+	SiReact,
+	SiRedis,
+	SiSqlite,
+	SiSupabase,
+	SiTailwindcss,
+	SiTypescript,
+	SiVercel
+} from "@icons-pack/react-simple-icons"
+import gsap from "gsap"
 
 const AboutMe = () => {
+	useGSAP(() => {
+		gsap.from('.animate-about-me-text', {
+			scrollTrigger: {
+				trigger: '.about-me-container',
+				scrub: true,
+				start: 'top 90%',
+				end: 'top 55%'
+			},
+			y: 200,
+			duration: 0.5,
+			opacity: 0,
+			filter: "blur(4px)"
+		})
+	})
+
 	return (
-		<section className="py-40 px-10 flex flex-col gap-2">
+		<section className="py-40 px-10 flex flex-col gap-2 about-me-container">
 			<div className="overflow-hidden flex flex-col">
 				<div className="overflow-hidden">
-					<h1 className="text-7xl font-korium font-light leading-none animate-text h-fit">
+					<h1 className="text-7xl font-korium font-light leading-none animate-about-me-text h-fit">
 						About Me
 					</h1>
 				</div>
 				<div className="overflow-hidden">
-					<p className="text-muted-dark animate-text">
+					<p className="text-muted-dark animate-about-me-text">
 						Keeping things simple and meaningful is what I do.
 					</p>
 				</div>
