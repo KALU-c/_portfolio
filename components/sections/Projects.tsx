@@ -25,7 +25,7 @@ const Projects = () => {
 	})
 
 	return (
-		<div className="flex flex-col gap-2 px-10 py-40 projects-container">
+		<section className="flex flex-col gap-2 md:px-10 py-40 projects-container">
 			<div className="overflow-hidden flex flex-col">
 				<div className="overflow-hidden">
 					<h1 className="text-7xl font-korium font-light leading-none animate-text h-fit">
@@ -50,7 +50,7 @@ const Projects = () => {
 					/>
 				))}
 			</div>
-		</div>
+		</section>
 	)
 }
 export default Projects
