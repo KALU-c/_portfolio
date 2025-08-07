@@ -85,13 +85,13 @@ const AboutMe = () => {
 
 		gsap.from('.icons-1', {
 			y: 100,
-			duration: 1,
+			duration: 2,
 			opacity: 0,
 			scrollTrigger: {
 				trigger: '.about-me-container',
 				scrub: true,
 				start: 'top 35%',
-				end: 'top 15%',
+				end: 'top 10%',
 			}
 		})
 	})

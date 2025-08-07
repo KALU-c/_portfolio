@@ -1,6 +1,6 @@
 "use client"
 
-import { Plus } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import SlideText from "../motion/SlideText"
 import { MotionButton } from "../ui/button"
 
@@ -38,9 +38,12 @@ const Services = () => {
 						/>
 					</div>
 
-					<MotionButton size={'lg'} className="self-start bg-background text-primary hover:bg-background/90 rounded-full">
-						Contact
-						<Plus className="ml-2" />
+					<MotionButton
+						size={'lg'}
+						className="self-start bg-background text-primary hover:bg-background/90 rounded-full h-14 text-xl"
+					>
+						<span className="text-xl">Contact</span>
+						<ArrowUpRight className="ml-2" />
 					</MotionButton>
 				</div>
 			</div>
