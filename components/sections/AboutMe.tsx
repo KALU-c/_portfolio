@@ -46,6 +46,56 @@ const AboutMe = () => {
 			opacity: 0,
 			filter: "blur(4px)"
 		})
+
+		gsap.from('.animate-img', {
+			y: 100,
+			duration: 0.5,
+			opacity: 0,
+			scrollTrigger: {
+				trigger: '.about-me-container',
+				scrub: true,
+				start: 'top 60%',
+				end: 'top 40%',
+			}
+		})
+
+		gsap.from('.about-me-desc', {
+			y: 100,
+			duration: 0.5,
+			opacity: 0,
+			scrollTrigger: {
+				trigger: '.about-me-container',
+				scrub: true,
+				markers: true,
+				start: 'top 60%',
+				end: 'top 40%',
+			}
+		})
+
+		gsap.from('.about-me-name', {
+			y: 100,
+			duration: 0.5,
+			opacity: 0,
+			scrollTrigger: {
+				trigger: '.about-me-container',
+				scrub: true,
+				markers: true,
+				start: 'top 60%',
+				end: 'top 40%',
+			}
+		})
+
+		gsap.from('.icons-1', {
+			y: 100,
+			duration: 1,
+			opacity: 0,
+			scrollTrigger: {
+				trigger: '.about-me-container',
+				scrub: true,
+				start: 'top 35%',
+				end: 'top 15%',
+			}
+		})
 	})
 
 	return (
@@ -67,60 +117,68 @@ const AboutMe = () => {
 				<div className="relative h-[500px] max-w-[450px] overflow-hidden rounded-2xl flex-1">
 					<img
 						src={"/1.png"}
-						className="absolute w-full h-full object-cover"
+						className="absolute w-full h-full object-cover animate-img"
 					/>
 				</div>
 
 				<div className="flex flex-col justify-between flex-1 py-4">
 					<div className="flex flex-col gap-4">
-						<h1 className="text-4xl font-medium tracking-tight font-telma">Endekalu Zemenu - <span className="font-medium text-xl tracking-wider text-muted-dark">Fullstack Developer</span></h1>
-						<p className="text-lg pr-20 text-muted-dark">
-							I’m a <span className="text-primary text-lg">full stack developer who enjoys building interfaces that feel effortless to use.</span> I care about <span className="text-primary text-lg">clean code, smooth interactions,</span> and making sure every detail has a reason to exist. I mostly work with<span className="text-primary text-lg"> React, Next.js, and NestJS,</span> and I love projects that balance design and logic. When I’m not coding, I’m probably <span className="text-primary text-lg">experimenting with animations,</span> experimenting with animations, trying new tools, or <span className="text-primary text-lg">figuring out how to make tech feel less like tech.</span>
+						<h1 className="text-4xl font-medium tracking-tight font-telma about-me-name">Endekalu Zemenu - <span className="font-medium text-xl tracking-wider text-muted-dark">Fullstack Developer</span></h1>
+						<p className="text-lg pr-20 text-muted-dark about-me-desc">
+							I’m a full stack developer who enjoys building interfaces that feel effortless to use. I care about clean code, smooth interactions, and making sure every detail has a reason to exist. I mostly work with React, Next.js, and NestJS, and I love projects that balance design and logic. When I’m not coding, I’m probably experimenting with animations, experimenting with animations, trying new tools, or figuring out how to make tech feel less like tech.
 						</p>
 					</div>
 
 					<div className="pt-8 flex flex-col gap-6">
 						<div className="flex flex-row gap-6 text-muted-dark items-center">
 							<p className="text-primary text-xl font-telma mr-4">Frontend - </p>
-							<SiHtml5 />
-							<SiCss />
-							<SiTailwindcss />
-							<SiJavascript className="rounded-xs" />
-							<SiTypescript className="rounded-xs" />
-							<SiReact />
-							<SiNextdotjs />
-							<SiGreensock />
-							<SiJest />
+							<div className="flex flex-row gap-8 icons-1">
+								<SiHtml5 />
+								<SiCss />
+								<SiTailwindcss />
+								<SiJavascript className="rounded-xs" />
+								<SiTypescript className="rounded-xs" />
+								<SiReact />
+								<SiNextdotjs />
+								<SiGreensock />
+								<SiJest />
+							</div>
 						</div>
 						<div className="flex flex-row gap-6 text-muted-dark items-center">
 							<p className="text-primary text-xl font-telma mr-4">Backend - </p>
-							<SiNextdotjs />
-							<SiNestjs />
-							<SiExpress />
-							<SiNodedotjs />
-							<SiSupabase />
-							<SiFirebase />
-							<SiNginx />
-							<SiRedis />
+							<div className="flex flex-row gap-8 icons-1">
+								<SiNextdotjs />
+								<SiNestjs />
+								<SiExpress />
+								<SiNodedotjs />
+								<SiSupabase />
+								<SiFirebase />
+								<SiNginx />
+								<SiRedis />
+							</div>
 						</div>
 
 						<div className="flex flex-row gap-6 text-muted-dark items-center">
 							<p className="text-primary text-xl font-telma mr-4">Tools - </p>
-							<SiPrisma />
-							<SiDocker />
-							<SiGit />
-							<SiGithub />
-							<SiVercel />
-							<SiFigma />
-							<SiHostinger />
+							<div className="flex flex-row gap-8 icons-1">
+								<SiPrisma />
+								<SiDocker />
+								<SiGit />
+								<SiGithub />
+								<SiVercel />
+								<SiFigma />
+								<SiHostinger />
+							</div>
 						</div>
 
 						<div className="flex flex-row gap-6 text-muted-dark items-center">
 							<p className="text-primary text-xl font-telma mr-4">Database - </p>
-							<SiPostgresql />
-							<SiMongodb />
-							<SiMysql />
-							<SiSqlite />
+							<div className="flex flex-row gap-8 icons-1">
+								<SiPostgresql />
+								<SiMongodb />
+								<SiMysql />
+								<SiSqlite />
+							</div>
 						</div>
 					</div>
 				</div>
