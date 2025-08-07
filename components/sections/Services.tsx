@@ -12,7 +12,7 @@ const Services = () => {
 				<div className="flex flex-col gap-4">
 					<div className="flex flex-row items-center justify-between">
 						<h1 className="text-lg">/Services</h1>
-						<span className="text-muted-foreground">(04)</span>
+						<span className="text-muted-foreground">(03)</span>
 					</div>
 
 					<div className="flex flex-col gap-4 py-10">

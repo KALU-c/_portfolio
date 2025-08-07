@@ -4,6 +4,7 @@ import LogoMarquee from "@/components/motion/LogoMarquee";
 import NavBar from "@/components/NavBar";
 import AboutMe from "@/components/sections/AboutMe";
 import Hero from "@/components/sections/Hero";
+import Process from "@/components/sections/Process";
 import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
 import gsap from "gsap";
@@ -20,9 +21,7 @@ export default function Home() {
       <Projects />
       <AboutMe />
       <Services />
-      <div className="min-h-dvh flex-center gap-4 bg-green-300">
-        test
-      </div>
+      <Process />
       <div className="min-h-dvh flex-center gap-4 bg-red-300">page</div>
       <div className="min-h-dvh flex-center gap-4 bg-blue-300">scroll</div>
     </main>
