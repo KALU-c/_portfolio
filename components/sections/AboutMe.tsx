@@ -66,7 +66,6 @@ const AboutMe = () => {
 			scrollTrigger: {
 				trigger: '.about-me-container',
 				scrub: true,
-				markers: true,
 				start: 'top 60%',
 				end: 'top 40%',
 			}
@@ -79,7 +78,6 @@ const AboutMe = () => {
 			scrollTrigger: {
 				trigger: '.about-me-container',
 				scrub: true,
-				markers: true,
 				start: 'top 60%',
 				end: 'top 40%',
 			}

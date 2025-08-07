@@ -6,7 +6,7 @@ import { Plus } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
-import FlipText, { FlipMultipleText } from "./FlipText";
+import FlipText, { FlipMultipleText } from "./motion/FlipText";
 
 const NavBar = () => {
 	const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', hour12: true }
