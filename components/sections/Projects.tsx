@@ -4,7 +4,6 @@ import { projects } from "@/constants/projects"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import ProjectCard from "../ProjectCard"
-import { useRef } from "react"
 
 const Projects = () => {
 	useGSAP(() => {
@@ -23,15 +22,17 @@ const Projects = () => {
 	})
 
 	return (
-		<section className="flex flex-col gap-2 md:px-10 py-40 projects-container">
+		<section className="flex flex-col gap-2 md:px-10 md:py-40 py-20 projects-container">
 			<div className="overflow-hidden flex flex-col">
-				<div className="overflow-hidden">
-					<h1 className="text-7xl font-korium font-light leading-none animate-text h-fit">
+				<div className="overflow-hidden flex flex-row items-end justify-between">
+					<h1 className="text-[clamp(3rem,2.5714rem+2.1429vw,4.5rem)] font-korium font-light leading-none animate-text h-fit text-center sm:text-start">
 						Selected Projects
 					</h1>
+
+					<p className="text-lg text-muted-dark animate-text">(01)</p>
 				</div>
 				<div className="overflow-hidden">
-					<p className="text-muted-dark animate-text">
+					<p className="text-muted-dark animate-text text-center sm:text-start">
 						A selection of projects that show my focus on simple, purposeful design with meaningful details.
 					</p>
 				</div>

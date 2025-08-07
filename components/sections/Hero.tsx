@@ -40,10 +40,10 @@ const Hero = () => {
 
 				<div className="self-center text-center font-medium tracking-tighter flex flex-col text-primary gap-4">
 					<div className="text-3xl text-muted-dark">
-						<span className="text-5xl font-telma font-medium text-primary">Code, </span>
-						<span className="text-5xl font-telma font-medium text-primary">design, </span>
+						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">Code, </span>
+						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">design, </span>
 						and{" "}
-						<span className="text-5xl font-telma font-medium text-primary">flow, </span>
+						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">flow, </span>
 						<span className="text-3xl text-muted-dark">— all in one mind.</span>
 					</div>
 

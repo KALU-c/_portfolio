@@ -31,9 +31,16 @@ import {
 	SiVercel
 } from "@icons-pack/react-simple-icons"
 import gsap from "gsap"
+import { SplitText } from "gsap/all"
+import { motion } from "motion/react"
+import Image from "next/image"
+
+const AnimatedImage = motion.create(Image)
 
 const AboutMe = () => {
 	useGSAP(() => {
+		const splitTextDesc = SplitText.create('.about-me-desc', { type: 'lines' })
+
 		gsap.from('.animate-about-me-text', {
 			scrollTrigger: {
 				trigger: '.about-me-container',
@@ -44,7 +51,8 @@ const AboutMe = () => {
 			y: 200,
 			duration: 0.5,
 			opacity: 0,
-			filter: "blur(4px)"
+			filter: "blur(4px)",
+			scale: 0.8,
 		})
 
 		gsap.from('.animate-img', {
@@ -59,10 +67,12 @@ const AboutMe = () => {
 			}
 		})
 
-		gsap.from('.about-me-desc', {
+		gsap.from(splitTextDesc.lines, {
 			y: 100,
 			duration: 0.5,
 			opacity: 0,
+			stagger: 0.05,
+			filter: "blur(4px)",
 			scrollTrigger: {
 				trigger: '.about-me-container',
 				scrub: true,
@@ -72,9 +82,10 @@ const AboutMe = () => {
 		})
 
 		gsap.from('.about-me-name', {
-			y: 100,
+			y: 50,
 			duration: 0.5,
 			opacity: 0,
+			filter: "blur(4px)",
 			scrollTrigger: {
 				trigger: '.about-me-container',
 				scrub: true,
@@ -97,25 +108,31 @@ const AboutMe = () => {
 	})
 
 	return (
-		<section className="py-40 px-10 flex flex-col gap-2 about-me-container">
+		<section className="md:py-40 md:px-10 py-20 flex flex-col gap-2 about-me-container">
 			<div className="overflow-hidden flex flex-col">
-				<div className="overflow-hidden">
-					<h1 className="text-7xl font-korium font-light leading-none animate-about-me-text h-fit">
+				<div className="overflow-hidden flex flex-row items-end justify-between">
+					<h1 className="text-[clamp(3rem,2.5714rem+2.1429vw,4.5rem)] font-korium font-light leading-none animate-about-me-text h-fit text-center sm:text-start">
 						About Me
 					</h1>
+
+					<p className="text-lg text-muted-dark animate-text animate-about-me-text">(02)</p>
 				</div>
 				<div className="overflow-hidden">
-					<p className="text-muted-dark animate-about-me-text">
+					<p className="text-muted-dark animate-about-me-text text-center sm:text-start">
 						Keeping things simple and meaningful is what I do.
 					</p>
 				</div>
 			</div>
 
-			<div className="py-10 flex flex-row gap-10">
-				<div className="relative h-[500px] max-w-[450px] overflow-hidden rounded-2xl flex-1">
-					<img
+			<div className="py-10 flex sm:flex-row flex-col gap-10">
+				<div className="hidden sm:block relative h-[500px] max-w-[450px] overflow-hidden rounded-2xl flex-1">
+					<AnimatedImage
 						src={"/1.png"}
 						className="absolute w-full h-full object-cover animate-img"
+						alt="my-img"
+						whileHover={{ scale: 1.1 }}
+						transition={{ ease: "easeInOut", duration: 0.5 }}
+						fill
 					/>
 				</div>
 
@@ -128,23 +145,32 @@ const AboutMe = () => {
 					</div>
 
 					<div className="pt-8 flex flex-col gap-6">
-						<div className="flex flex-row gap-6 text-muted-dark items-center">
-							<p className="text-primary text-xl font-telma mr-4">Frontend - </p>
-							<div className="flex flex-row gap-8 icons-1">
-								<SiHtml5 />
-								<SiCss />
-								<SiTailwindcss />
-								<SiJavascript className="rounded-xs" />
-								<SiTypescript className="rounded-xs" />
-								<SiReact />
-								<SiNextdotjs />
-								<SiGreensock />
-								<SiJest />
+						<div className="flex flex-row gap-6 text-muted-dark sm:items-center items-start icons-1">
+							<p className="text-primary text-xl font-telma mr-4">Database - </p>
+							<div className="flex flex-row gap-8 flex-wrap">
+								<SiPostgresql />
+								<SiMongodb />
+								<SiMysql />
+								<SiSqlite />
 							</div>
 						</div>
-						<div className="flex flex-row gap-6 text-muted-dark items-center">
+
+						<div className="flex flex-row gap-6 text-muted-dark sm:items-center items-start icons-1">
+							<p className="text-primary text-xl font-telma mr-4">Tools - </p>
+							<div className="flex flex-row gap-8 flex-wrap">
+								<SiPrisma />
+								<SiDocker />
+								<SiGit />
+								<SiGithub />
+								<SiVercel />
+								<SiFigma />
+								<SiHostinger />
+							</div>
+						</div>
+
+						<div className="flex flex-row gap-6 text-muted-dark sm:items-center items-start icons-1">
 							<p className="text-primary text-xl font-telma mr-4">Backend - </p>
-							<div className="flex flex-row gap-8 icons-1">
+							<div className="flex flex-row gap-8 flex-wrap">
 								<SiNextdotjs />
 								<SiNestjs />
 								<SiExpress />
@@ -156,28 +182,22 @@ const AboutMe = () => {
 							</div>
 						</div>
 
-						<div className="flex flex-row gap-6 text-muted-dark items-center">
-							<p className="text-primary text-xl font-telma mr-4">Tools - </p>
-							<div className="flex flex-row gap-8 icons-1">
-								<SiPrisma />
-								<SiDocker />
-								<SiGit />
-								<SiGithub />
-								<SiVercel />
-								<SiFigma />
-								<SiHostinger />
+
+						<div className="flex flex-row gap-6 text-muted-dark sm:items-center items-start icons-1">
+							<p className="text-primary text-xl font-telma mr-4">Frontend - </p>
+							<div className="flex flex-row gap-8 flex-wrap">
+								<SiHtml5 />
+								<SiCss />
+								<SiTailwindcss />
+								<SiJavascript className="rounded-xs" />
+								<SiTypescript className="rounded-xs" />
+								<SiReact />
+								<SiNextdotjs />
+								<SiGreensock />
+								<SiJest />
 							</div>
 						</div>
 
-						<div className="flex flex-row gap-6 text-muted-dark items-center">
-							<p className="text-primary text-xl font-telma mr-4">Database - </p>
-							<div className="flex flex-row gap-8 icons-1">
-								<SiPostgresql />
-								<SiMongodb />
-								<SiMysql />
-								<SiSqlite />
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
