@@ -17,24 +17,32 @@ const Services = () => {
 
 					<div className="flex flex-col gap-4 py-10">
 						<SlideText
-							text="Web Development"
-							src="/1.png"
 							order={1}
+							src="/1.png"
+							text="Web Development"
+							tools={["Next.js", "Tailwind CSS", "React", "TypeScript", "Javascript"]}
+							description="I build fast, responsive websites that feel great to use and are easy to maintain. From landing pages to full-stack apps, everything is designed to scale and perform."
 						/>
 						<SlideText
-							text="App Development"
-							src="/1.png"
 							order={2}
+							src="/1.png"
+							text="App Development"
+							tools={["React Native (Expo)", "NestJS", "PostgreSQL", "Firebase", "Stripe"]}
+							description="I create mobile apps that run smoothly on any device. Whether it's a simple MVP or a full product, I focus on speed, usability, and clean architecture."
 						/>
 						<SlideText
-							text="UI/UX Design"
-							src="/1.png"
 							order={3}
+							src="/1.png"
+							text="UI/UX Design"
+							description="I design clean, user-friendly interfaces that feel intuitive and look great. It's all about solving problems with thoughtful design."
+							tools={["Figma", "Tailwind CSS", "GSAP", "Motion/Framer Motion", "Lottie"]}
 						/>
 						<SlideText
-							text="Optimization"
-							src="/1.png"
 							order={4}
+							src="/1.png"
+							text="Optimization"
+							tools={["Vercel Analytics", "SEO Tools", "Redis", "Responsive Design", "Code Splitting"]}
+							description="I make things faster, smoother, and more accessible — from performance tweaks to SEO improvements and responsive fixes."
 						/>
 					</div>
 
