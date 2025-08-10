@@ -3,7 +3,7 @@ import { MotionButton } from "../ui/button"
 
 const Process = () => {
 	return (
-		<section className="min-h-dvh sm:px-10 flex flex-col items-center justify-center">
+		<section className="min-h-dvh sm:px-10 flex flex-col items-center justify-center overflow-hidden">
 			<div className="flex flex-col">
 				<div className="flex flex-row items-center justify-between">
 					<p className="text-lg">/Process</p>

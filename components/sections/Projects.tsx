@@ -3,7 +3,9 @@
 import { projects } from "@/constants/projects"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
+import { Plus } from "lucide-react"
 import ProjectCard from "../ProjectCard"
+import { MotionButton } from "../ui/button"
 
 const Projects = () => {
 	useGSAP(() => {
@@ -31,23 +33,29 @@ const Projects = () => {
 
 					<p className="text-lg text-muted-dark animate-text">(01)</p>
 				</div>
-				<div className="overflow-hidden">
+				<div className="overflow-hidden flex flex-row justify-between">
 					<p className="text-muted-dark animate-text text-center sm:text-start">
 						A selection of projects that show my focus on simple, purposeful design with meaningful details.
 					</p>
 				</div>
 			</div>
-			<div className="py-10 grid lg:grid-cols-2 gap-6 grid-cols-1">
 
-				{projects.map(({ title, description, src, year }, index) => (
-					<ProjectCard
-						key={index}
-						title={title}
-						description={description}
-						src={src}
-						year={year}
-					/>
-				))}
+			<div className="flex flex-col gap-2 py-6">
+				<MotionButton className="w-fit rounded-full bg-muted text-primary hover:bg-muted-foreground/80 self-end">
+					<span className="text-sm">View all projects</span>
+					<Plus className="ml-2" />
+				</MotionButton>
+				<div className="grid lg:grid-cols-2 gap-6 grid-cols-1">
+					{projects.map(({ title, description, src, year }, index) => (
+						<ProjectCard
+							key={index}
+							title={title}
+							description={description}
+							src={src}
+							year={year}
+						/>
+					))}
+				</div>
 			</div>
 		</section>
 	)

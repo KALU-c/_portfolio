@@ -1,8 +1,8 @@
 import { Lenis } from "@/lib/lenis";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import localFont from "next/font/local"
 
 const InterSans = Inter({
   variable: "--font-inter-sans",
@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <Lenis>
         <body
-          className={`${InterSans.className} ${koriumSans.variable} ${telmaSans.variable} antialiased md:px-[50px] xl:px-[180px] px-3`}
+          className={`${InterSans.className} ${koriumSans.variable} ${telmaSans.variable} antialiased`}
         >
           {children}
         </body>
