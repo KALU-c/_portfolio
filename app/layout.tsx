@@ -1,13 +1,12 @@
 import { Lenis } from "@/lib/lenis";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const InterSans = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"],
-});
+const BricolageGrotesqueSans = Bricolage_Grotesque({
+  variable: "--font-bricolage-sans",
+})
 
 const koriumSans = localFont({
   variable: "--font-korium",
@@ -33,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <Lenis>
         <body
-          className={`${InterSans.className} ${koriumSans.variable} ${telmaSans.variable} antialiased`}
+          className={`${BricolageGrotesqueSans.className} ${koriumSans.variable} ${telmaSans.variable} antialiased`}
         >
           {children}
         </body>

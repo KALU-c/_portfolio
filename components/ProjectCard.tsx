@@ -2,9 +2,10 @@
 
 import { ProjectCardProps } from "@/types/project"
 import { motion } from "motion/react"
+import Link from "next/link"
 import { useState } from "react"
 
-const ProjectCard = ({ title, description, src, year }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, src, year, link }: ProjectCardProps) => {
 	const [isHovered, setIsHovered] = useState(false)
 
 	return (
@@ -19,20 +20,22 @@ const ProjectCard = ({ title, description, src, year }: ProjectCardProps) => {
 				animate={isHovered ? "hovered" : "initial"}
 				className="w-full flex-[0.9] rounded-md overflow-hidden relative"
 			>
-				<motion.img
-					src={src}
-					alt="project-1"
-					className="absolute inset-0 w-full h-full object-cover"
-					variants={{
-						hovered: {
-							scale: 1.1
-						},
-						initial: {
-							scale: 1
-						}
-					}}
-					transition={{ ease: "easeInOut", duration: 0.5 }}
-				/>
+				<Link href={link} target="_blank">
+					<motion.img
+						src={src}
+						alt="project-1"
+						className="absolute inset-0 w-full h-full object-cover"
+						variants={{
+							hovered: {
+								scale: 1.1
+							},
+							initial: {
+								scale: 1
+							}
+						}}
+						transition={{ ease: "easeInOut", duration: 0.5 }}
+					/>
+				</Link>
 			</motion.div>
 
 

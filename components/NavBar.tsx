@@ -53,8 +53,8 @@ const NavBar = () => {
 										transition={{ duration: 0.3 }}
 										className="flex gap-4"
 									>
-										<MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Projects</MotionButton>
-										<MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Blog</MotionButton>
+										{/* <MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Projects</MotionButton> */}
+										{/* <MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Blog</MotionButton> */}
 									</motion.div>
 								)}
 							</AnimatePresence>

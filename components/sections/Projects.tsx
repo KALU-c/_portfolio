@@ -41,18 +41,19 @@ const Projects = () => {
 			</div>
 
 			<div className="flex flex-col gap-2 py-6">
-				<MotionButton className="w-fit rounded-full bg-muted text-primary hover:bg-muted-foreground/80 self-end">
+				{/* <MotionButton className="w-fit rounded-full bg-muted text-primary hover:bg-muted-foreground/80 self-end">
 					<span className="text-sm">View all projects</span>
 					<Plus className="ml-2" />
-				</MotionButton>
+				</MotionButton> */}
 				<div className="grid lg:grid-cols-2 gap-6 grid-cols-1">
-					{projects.map(({ title, description, src, year }, index) => (
+					{projects.map(({ title, description, src, year, link }, index) => (
 						<ProjectCard
 							key={index}
 							title={title}
 							description={description}
 							src={src}
 							year={year}
+							link={link}
 						/>
 					))}
 				</div>

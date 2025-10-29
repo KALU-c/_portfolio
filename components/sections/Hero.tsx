@@ -26,8 +26,10 @@ const Hero = () => {
 			opacity: 0,
 			stagger: {
 				amount: 0.5,
+				from: "random"
 			},
-			ease: "power3"
+			filter: "blur(16px)",
+			ease: "power1.inOut",
 		})
 	})
 

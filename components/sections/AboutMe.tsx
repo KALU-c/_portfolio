@@ -138,7 +138,7 @@ const AboutMe = () => {
 
 				<div className="flex flex-col justify-between flex-1 py-4">
 					<div className="flex flex-col gap-4">
-						<h1 className="text-4xl font-medium tracking-tight font-telma about-me-name">Endekalu Zemenu - <span className="font-medium text-xl tracking-wider text-muted-dark">Fullstack Developer</span></h1>
+						<h1 className="text-4xl font-medium tracking-tight about-me-name">Endekalu Zemenu - <span className="font-medium text-xl tracking-wider text-muted-dark">Fullstack Developer</span></h1>
 						<p className="text-lg pr-20 text-muted-dark about-me-desc">
 							I’m a full stack developer who enjoys building interfaces that feel effortless to use. I care about clean code, smooth interactions, and making sure every detail has a reason to exist. I mostly work with React, Next.js, and NestJS, and I love projects that balance design and logic. When I’m not coding, I’m probably experimenting with animations, experimenting with animations, trying new tools, or figuring out how to make tech feel less like tech.
 						</p>

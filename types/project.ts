@@ -3,4 +3,5 @@ export type ProjectCardProps = {
 	description: string
 	src: string
 	year: number
+	link: string
 }
