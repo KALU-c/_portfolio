@@ -27,7 +27,7 @@ const ProjectCard = ({ title, description, src, year, link }: ProjectCardProps) 
 						className="absolute inset-0 w-full h-full object-cover"
 						variants={{
 							hovered: {
-								scale: 1.1
+								scale: 1.05
 							},
 							initial: {
 								scale: 1
