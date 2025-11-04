@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full">
       <div className="md:px-[50px] xl:px-[180px] px-3">
         <NavBar />
         <Hero />
