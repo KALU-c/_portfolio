@@ -34,10 +34,10 @@ const Process = () => {
 					<span className="text-muted-dark">(04)</span>
 				</div>
 
-				<div className="flex flex-row justify-between py-10 gap-20">
+				<div className="flex md:flex-row flex-col justify-between py-10 gap-20">
 					<div className="flex flex-col gap-10 flex-1">
 						<div className="flex flex-col gap-3">
-							<h1 className="text-5xl font-medium tracking-tight">
+							<h1 className="text-[clamp(2.25rem,1.9432rem+1.3636vw,3rem)] font-medium tracking-tight leading-none">
 								My process is clear, intentional, and flexible.
 							</h1>
 							<p>I believe great work comes from deep understanding, open collaboration, and attention to detail.</p>
