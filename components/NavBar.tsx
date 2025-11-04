@@ -39,7 +39,9 @@ const NavBar = () => {
 			>
 				<div className="flex-between">
 					<div className="flex-center gap-2 xl:px-2">
-						<h1 className="text-lg font-medium tracking-tighter">Kalu&reg;</h1>
+						<Link href={'/'}>
+							<h1 className="text-lg font-medium tracking-tighter">Kalu&reg;</h1>
+						</Link>
 						<p className="text-muted-dark text-sm">{today.toLocaleString("en-US", options)}</p>
 					</div>
 
@@ -58,7 +60,9 @@ const NavBar = () => {
 									</motion.div>
 								)}
 							</AnimatePresence>
-							<MotionButton textClassName="text-[14px]" className="rounded-full h-7">Contact</MotionButton>
+							<Link href={'/contact'}>
+								<MotionButton textClassName="text-[14px]" className="rounded-full h-7">Contact</MotionButton>
+							</Link>
 						</div>
 						<Button
 							size={"icon"}
