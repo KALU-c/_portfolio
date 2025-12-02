@@ -10,7 +10,7 @@ const ProjectCard = ({ title, description, src, year, link }: ProjectCardProps) 
 
 	return (
 		<motion.div
-			className="bg-[#ebebeb] p-2 flex flex-col gap-3 sm:h-[580px] h-[450px] rounded-2xl cursor-pointer"
+			className="p-2 flex flex-col gap-3 sm:h-[580px] h-[450px] rounded-2xl cursor-pointer"
 			whileHover={{ backgroundColor: "#0a0a0a" }}
 			onHoverStart={() => setIsHovered(true)}
 			onHoverEnd={() => setIsHovered(false)}

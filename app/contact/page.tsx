@@ -21,7 +21,7 @@ const ContactUsPageContent = () => {
 			<div className="lg:flex-1 flex flex-col gap-10">
 				<div className="flex flex-col flex-1 gap-6">
 					<div className="flex flex-col">
-						<h2 className="text-6xl font-medium">Contact me</h2>
+						<h2 className="text-6xl font-semibold tracking-tight">Contact me</h2>
 						<p className="text-lg font-light text-muted-dark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, non?</p>
 					</div>
 

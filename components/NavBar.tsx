@@ -94,7 +94,7 @@ const NavBar = () => {
 											key={index}
 											className="py-2 border-b-1 border-b-zinc-400 tracking-tight font-semibold flex flex-row justify-between items-center"
 										>
-											<Link href={item.link}>
+											<Link href={item.link} onClick={() => setIsOpen(false)}>
 												<FlipMultipleText
 													text1={item.label}
 													className1="text-2xl"

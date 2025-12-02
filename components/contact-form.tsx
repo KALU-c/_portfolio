@@ -80,7 +80,7 @@ export function ContactUsForm() {
 			<Form {...form}>
 				<form
 					// onSubmit={handleSubmit}
-					className="flex flex-col p-4 py-6 sm:p-5 md:p-8 md:px-5 w-full rounded-md gap-6 border"
+					className="flex flex-col p-4 py-6 sm:p-5 md:p-8 md:px-5 w-full rounded-md gap-6"
 				>
 					<FormField
 						control={form.control}

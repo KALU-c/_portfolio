@@ -110,7 +110,7 @@ const AboutMe = () => {
 	})
 
 	return (
-		<section className="md:pb-40 md:px-10 pb-20 flex flex-col gap-2 about-me-container">
+		<section id="about" className="md:pb-40 md:px-10 pb-20 flex flex-col gap-2 about-me-container">
 			<div className="overflow-hidden flex flex-col">
 				<div className="overflow-hidden flex flex-row items-end justify-between">
 					<h1 className="text-[clamp(3rem,2.5714rem+2.1429vw,4.5rem)] font-korium font-light leading-none animate-about-me-text h-fit text-center sm:text-start">
