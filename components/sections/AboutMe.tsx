@@ -118,13 +118,13 @@ const AboutMe = () => {
 					<p className="text-lg text-muted-dark animate-text animate-about-me-text">(02)</p>
 				</div>
 				<div className="overflow-hidden">
-					<p className="text-muted-dark animate-about-me-text text-center sm:text-start">
+					<p className="text-muted-dark animate-about-me-text md:text-center sm:text-start">
 						Keeping things simple and meaningful is what I do.
 					</p>
 				</div>
 			</div>
 
-			<div className="py-10 flex sm:flex-row flex-col gap-10">
+			<div className="md:py-10 py-2 flex sm:flex-row flex-col gap-10">
 				<div className="hidden sm:block relative h-[500px] max-w-[450px] overflow-hidden rounded-2xl flex-1">
 					<AnimatedImage
 						src={"/1.png"}
@@ -139,62 +139,62 @@ const AboutMe = () => {
 				<div className="flex flex-col justify-between flex-1 py-4">
 					<div className="flex flex-col gap-4">
 						{/* <h1 className="text-4xl font-medium tracking-tighter about-me-name">Endekalu Zemenu - <span className="font-medium text-xl tracking-wider text-muted-dark">Fullstack Developer</span></h1> */}
-						<p className="text-lg pr-20 text-muted-dark about-me-desc">
-							I’m a full stack developer who enjoys building interfaces that feel effortless to use. I care about clean code, smooth interactions, and making sure every detail has a reason to exist. I mostly work with React, Next.js, and NestJS, and I love projects that balance design and logic. When I’m not coding, I’m probably experimenting with animations, experimenting with animations, trying new tools, or figuring out how to make tech feel less like tech.
+						<p className="md:text-lg md:pr-20 text-muted-dark about-me-desc">
+							I&apos;m a full stack developer who enjoys building interfaces that feel effortless to use. I care about clean code, smooth interactions, and making sure every detail has a reason to exist. I mostly work with React, Next.js, and NestJS, and I love projects that balance design and logic. When I&apos;m not coding, I&apos;m probably experimenting with animations, experimenting with animations, trying new tools, or figuring out how to make tech feel less like tech.
 						</p>
 					</div>
 
 					<div className="pt-8 flex flex-col gap-6">
-						<div className="flex flex-row gap-6 text-muted-dark sm:items-center items-start icons-1">
-							<p className="text-primary text-xl font-medium mr-4">Database - </p>
-							<div className="flex flex-row gap-8 flex-wrap">
-								<SiPostgresql />
-								<SiMongodb />
-								<SiMysql />
-								<SiSqlite />
+						<div className="flex flex-col md:flex-row gap-2 md:gap-6 text-muted-dark sm:items-center items-start icons-1">
+							<p className="text-primary text-[clamp(0.9375rem,0.8482rem+0.4464vw,1.25rem)] font-medium mr-4">Database - </p>
+							<div className="flex flex-row gap-6 md:gap-8 flex-wrap">
+								<SiPostgresql className="size-5" />
+								<SiMongodb className="size-5" />
+								<SiMysql className="size-5" />
+								<SiSqlite className="size-5" />
 							</div>
 						</div>
 
-						<div className="flex flex-row gap-6 text-muted-dark sm:items-center items-start icons-1">
-							<p className="text-primary text-xl font-medium mr-4">Tools - </p>
-							<div className="flex flex-row gap-8 flex-wrap">
-								<SiPrisma />
-								<SiDocker />
-								<SiGit />
-								<SiGithub />
-								<SiVercel />
-								<SiFigma />
-								<SiHostinger />
+						<div className="flex flex-col md:flex-row gap-2 md:gap-6 text-muted-dark sm:items-center items-start icons-1">
+							<p className="text-primary text-[clamp(0.9375rem,0.8482rem+0.4464vw,1.25rem)] font-medium mr-4">Tools - </p>
+							<div className="flex flex-row gap-6 md:gap-8 flex-wrap">
+								<SiPrisma className="size-5" />
+								<SiDocker className="size-5" />
+								<SiGit className="size-5" />
+								<SiGithub className="size-5" />
+								<SiVercel className="size-5" />
+								<SiFigma className="size-5" />
+								<SiHostinger className="size-5" />
 							</div>
 						</div>
 
-						<div className="flex flex-row gap-6 text-muted-dark sm:items-center items-start icons-1">
-							<p className="text-primary text-xl font-medium mr-4">Backend - </p>
-							<div className="flex flex-row gap-8 flex-wrap">
-								<SiNextdotjs />
-								<SiNestjs />
-								<SiExpress />
-								<SiNodedotjs />
-								<SiSupabase />
-								<SiFirebase />
-								<SiNginx />
-								<SiRedis />
+						<div className="flex flex-col md:flex-row gap-2 md:gap-6 text-muted-dark sm:items-center items-start icons-1">
+							<p className="text-primary text-[clamp(0.9375rem,0.8482rem+0.4464vw,1.25rem)] font-medium mr-4">Backend - </p>
+							<div className="flex flex-row gap-6 md:gap-8 flex-wrap">
+								<SiNextdotjs className="size-5" />
+								<SiNestjs className="size-5" />
+								<SiExpress className="size-5" />
+								<SiNodedotjs className="size-5" />
+								<SiSupabase className="size-5" />
+								<SiFirebase className="size-5" />
+								<SiNginx className="size-5" />
+								<SiRedis className="size-5" />
 							</div>
 						</div>
 
 
-						<div className="flex flex-row gap-6 text-muted-dark sm:items-center items-start icons-1">
-							<p className="text-primary text-xl font-medium mr-4">Frontend - </p>
-							<div className="flex flex-row gap-8 flex-wrap">
-								<SiHtml5 />
-								<SiCss />
-								<SiTailwindcss />
-								<SiJavascript className="rounded-xs" />
-								<SiTypescript className="rounded-xs" />
-								<SiReact />
-								<SiNextdotjs />
-								<SiGreensock />
-								<SiJest />
+						<div className="flex flex-col md:flex-row gap-2 md:gap-6 text-muted-dark sm:items-center items-start icons-1">
+							<p className="text-primary text-[clamp(0.9375rem,0.8482rem+0.4464vw,1.25rem)] font-medium mr-4">Frontend - </p>
+							<div className="flex flex-row gap-6 md:gap-8 flex-wrap">
+								<SiHtml5 className="size-5" />
+								<SiCss className="size-5" />
+								<SiTailwindcss className="size-5" />
+								<SiJavascript className="rounded-xs size-5" />
+								<SiTypescript className="rounded-xs size-5" />
+								<SiReact className="size-5" />
+								<SiNextdotjs className="size-5" />
+								<SiGreensock className="size-5" />
+								<SiJest className="size-5" />
 							</div>
 						</div>
 

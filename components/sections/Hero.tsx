@@ -35,7 +35,7 @@ const Hero = () => {
 
 	return (
 		<section>
-			<div className="flex flex-col items-center justify-around leading-0 min-h-dvh py-28">
+			<div className="flex flex-col items-center justify-around leading-0 md:min-h-dvh py-28 max-md:py-44">
 				<h1 className="text-[clamp(3rem,15vw,280px)] font-medium leading-none text-primary font-korium name">
 					ENDEKALU ZEMENU
 				</h1>
