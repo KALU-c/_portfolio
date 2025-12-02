@@ -55,13 +55,13 @@ const Hero = () => {
 				</h1>
 
 				<div className="self-center text-center font-medium tracking-tighter flex flex-col text-primary gap-4">
-					{/* <div className="text-3xl text-muted-dark">
+					<div className="text-3xl text-muted-dark max-md:hidden">
 						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">Code, </span>
 						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">design, </span>
 						and{" "}
 						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">flow, </span>
 						<span className="text-3xl text-muted-dark">— all in one mind.</span>
-					</div> */}
+					</div>
 
 					<span className="text-muted-dark max-w-4xl desc-2 overflow-hidden">
 						I love turning ideas into things people actually enjoy using. Whether it's designing clean interfaces or writing solid, maintainable code, I care about the little details that make the experience feel smooth and natural.

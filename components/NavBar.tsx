@@ -7,10 +7,12 @@ import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
 import FlipText, { FlipMultipleText } from "./motion/FlipText";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const NavBar = () => {
 	const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', hour12: true }
 	const today = new Date();
+	const isMobile = useIsMobile();
 
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -32,13 +34,13 @@ const NavBar = () => {
 			</AnimatePresence>
 
 			<motion.nav
-				animate={{ height: isOpen ? "485px" : "45px" }}
+				animate={{ height: isOpen ? (isMobile ? "400px" : "485px" ) : "50px" }}
 				transition={{ ease: "easeInOut", duration: 0.5 }}
 				exit={{ animationDuration: 0.1 }}
-				className="h-[45px] bg-muted/90 backdrop-blur-sm rounded-b-2xl p-[6px] top-0 z-50 fixed inset-0 md:mx-[50px] xl:mx-[180px] mx-3 flex flex-col justify-between"
+				className="h-[45px] bg-muted/90 backdrop-blur-sm rounded-b-2xl p-[6px] top-0 z-50 fixed inset-0 md:mx-[50px] xl:mx-[180px] flex flex-col justify-between"
 			>
 				<div className="flex-between">
-					<div className="flex-center gap-2 xl:px-2">
+					<div className="flex-center gap-2 px-2">
 						<Link href={'/'}>
 							<h1 className="text-lg font-medium tracking-tighter">Kalu&reg;</h1>
 						</Link>
@@ -85,7 +87,7 @@ const NavBar = () => {
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ duration: 1, delay: 0.5 }}
-							className="px-4 flex flex-col justify-between flex-1 pb-4"
+							className="px-4 flex flex-col md:justify-between flex-1 pb-4"
 						>
 							<div className="flex flex-row justify-between items-center gap-8 py-8">
 								<ul className="flex flex-col gap-2 flex-1">
@@ -97,7 +99,7 @@ const NavBar = () => {
 											<Link href={item.link} onClick={() => setIsOpen(false)}>
 												<FlipMultipleText
 													text1={item.label}
-													className1="text-2xl"
+													className1="text-[clamp(1.25rem,1.1786rem+0.3571vw,1.5rem)]"
 												/>
 											</Link>
 										</li>
