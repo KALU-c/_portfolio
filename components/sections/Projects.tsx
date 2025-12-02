@@ -22,7 +22,7 @@ const Projects = () => {
 	})
 
 	return (
-		<section className="flex flex-col gap-2 md:px-10 md:py-40 py-20 projects-container">
+		<section className="flex flex-col gap-2 md:px-10 md:py-40 py-24 projects-container">
 			<div className="overflow-hidden flex flex-col">
 				<div className="overflow-hidden flex flex-row items-end justify-between">
 					<h1 className="text-[clamp(3rem,2.5714rem+2.1429vw,4.5rem)] font-korium font-light leading-none md:animate-text h-fit text-center sm:text-start">

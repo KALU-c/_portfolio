@@ -1,6 +1,7 @@
 import { Plus } from "lucide-react"
 import BoxList from "../box-list"
 import { MotionButton } from "../ui/button"
+import Link from "next/link"
 
 const processSteps = [
 	{
@@ -42,10 +43,12 @@ const Process = () => {
 							</h1>
 							<p>I believe great work comes from deep understanding, open collaboration, and attention to detail.</p>
 						</div>
-						<MotionButton className="self-start rounded-full bg-muted text-primary hover:bg-muted-foreground/80">
-							Let's talk
-							<Plus className="ml-2" />
-						</MotionButton>
+						<Link href={'/contact'}>
+							<MotionButton className="self-start rounded-full bg-muted text-primary hover:bg-muted-foreground/80">
+								Let's talk
+								<Plus className="ml-2" />
+							</MotionButton>
+						</Link>
 					</div>
 
 					<BoxList steps={processSteps} />

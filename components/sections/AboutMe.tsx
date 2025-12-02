@@ -1,5 +1,6 @@
 "use client"
 
+import { useIsMobile } from "@/hooks/use-mobile"
 import { useGSAP } from "@gsap/react"
 import {
 	SiCss,
@@ -45,8 +46,8 @@ const AboutMe = () => {
 			scrollTrigger: {
 				trigger: '.about-me-container',
 				scrub: true,
-				start: 'top 90%',
-				end: 'top 55%'
+				start: 'top 95%',
+				end: 'top 85%',
 			},
 			y: 200,
 			duration: 0.5,
@@ -62,8 +63,8 @@ const AboutMe = () => {
 			scrollTrigger: {
 				trigger: '.about-me-container',
 				scrub: true,
-				start: 'top 60%',
-				end: 'top 40%',
+				start: 'top 80%',
+				end: 'top 60%',
 			}
 		})
 
@@ -76,39 +77,40 @@ const AboutMe = () => {
 			scrollTrigger: {
 				trigger: '.about-me-container',
 				scrub: true,
-				start: 'top 60%',
-				end: 'top 40%',
+				start: 'top 80%',
+				end: 'top 60%',
 			}
 		})
 
-		gsap.from('.about-me-name', {
-			y: 50,
-			duration: 0.5,
-			opacity: 0,
-			filter: "blur(4px)",
-			scrollTrigger: {
-				trigger: '.about-me-container',
-				scrub: true,
-				start: 'top 60%',
-				end: 'top 40%',
-			}
-		})
+		// gsap.from('.about-me-name', {
+		// 	y: 50,
+		// 	duration: 0.5,
+		// 	opacity: 0,
+		// 	filter: "blur(4px)",
+		// 	scrollTrigger: {
+		// 		trigger: '.about-me-container',
+		// 		scrub: true,
+		// 		start: 'top 80%',
+		// 		end: 'top 60%',
+		// 	}
+		// })
 
 		gsap.from('.icons-1', {
 			y: 100,
 			duration: 2,
 			opacity: 0,
+			stagger: 0.5,
 			scrollTrigger: {
 				trigger: '.about-me-container',
 				scrub: true,
-				start: 'top 35%',
-				end: 'top 10%',
+				start: 'top 60%',
+				end: 'top 40%',
 			}
 		})
 	})
 
 	return (
-		<section className="md:py-40 md:px-10 py-20 flex flex-col gap-2 about-me-container">
+		<section className="md:pb-40 md:px-10 pb-20 flex flex-col gap-2 about-me-container">
 			<div className="overflow-hidden flex flex-col">
 				<div className="overflow-hidden flex flex-row items-end justify-between">
 					<h1 className="text-[clamp(3rem,2.5714rem+2.1429vw,4.5rem)] font-korium font-light leading-none animate-about-me-text h-fit text-center sm:text-start">
@@ -118,7 +120,7 @@ const AboutMe = () => {
 					<p className="text-lg text-muted-dark animate-text animate-about-me-text">(02)</p>
 				</div>
 				<div className="overflow-hidden">
-					<p className="text-muted-dark animate-about-me-text md:text-center sm:text-start">
+					<p className="text-muted-dark animate-about-me-text text-start">
 						Keeping things simple and meaningful is what I do.
 					</p>
 				</div>
@@ -136,7 +138,7 @@ const AboutMe = () => {
 					/>
 				</div>
 
-				<div className="flex flex-col justify-between flex-1 py-4">
+				<div className="flex flex-col flex-1 py-4">
 					<div className="flex flex-col gap-4">
 						{/* <h1 className="text-4xl font-medium tracking-tighter about-me-name">Endekalu Zemenu - <span className="font-medium text-xl tracking-wider text-muted-dark">Fullstack Developer</span></h1> */}
 						<p className="md:text-lg md:pr-20 text-muted-dark about-me-desc">
