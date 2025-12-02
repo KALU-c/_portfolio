@@ -30,28 +30,46 @@ const Footer = () => {
 			<div className="flex-1 flex flex-col justify-between w-full lg:px-[330px] px-3 pb-6">
 				<div className="flex flex-col md:flex-row md:items-center max-md:gap-4 justify-between w-full">
 					<p className="text-muted-foreground">
-						Every project starts with a hello. Drop me a message and let’s see where it goes.
+						Every project starts with a hello. Drop me a message and let&apos;s see where it goes.
 					</p>
 
 					<div className="flex flex-col">
-						<FlipText className="text-lg font-semibold">realkal.ez@gmail.com</FlipText>
-						<FlipText className="text-sm text-muted-dark">+251 934 898 608</FlipText>
+						<Link href={"mailto:endekaluzemenu6@gmail.com"}>
+							<FlipText className="text-lg font-semibold">endekaluzemenu6@gmail.com</FlipText>
+						</Link>
+						<Link href={"tel:+251934898608"}>
+							<FlipText className="text-sm text-muted-dark">+251 934 898 608</FlipText>
+						</Link>
 					</div>
 				</div>
 
 				<div className="flex md:flex-row items-end justify-between w-full">
 					<div className="flex flex-col gap-1.5">
-						<FlipText className="text-sm">Home</FlipText>
-						<FlipText className="text-sm">About</FlipText>
-						<FlipText className="text-sm">Projects</FlipText>
-						<FlipText className="text-sm">Blog</FlipText>
-						<FlipText className="text-sm">Contact</FlipText>
+						<Link href={"/"}>
+							<FlipText className="text-sm">Home</FlipText>
+						</Link>
+						<Link href={"/#about"}>
+							<FlipText className="text-sm">About</FlipText>
+						</Link>
+						<Link href={"/#projects"}>
+							<FlipText className="text-sm">Projects</FlipText>
+						</Link>
+						<Link href={"/"}>
+							<FlipText className="text-sm">Home</FlipText>
+						</Link>
+						<Link href={"/contact"}>
+							<FlipText className="text-sm">Contact</FlipText>
+						</Link>
 					</div>
 
 					<div className="flex flex-col gap-1.5">
-						<FlipText className="text-sm">Twitter/X</FlipText>
-						<FlipText className="text-sm">LinkedIn</FlipText>
-						<FlipText className="text-sm">Telegram</FlipText>
+						{/* <FlipText className="text-sm">Twitter/X</FlipText> */}
+						<Link href={"https://linkedin.com/in/endekalu"} target="_blank">
+							<FlipText className="text-sm">LinkedIn</FlipText>
+						</Link>
+						<Link href={"https://t.me/real_kal"} target="_blank">
+							<FlipText className="text-sm">Telegram</FlipText>
+						</Link>
 					</div>
 
 					<div className="flex flex-col gap-1.5 max-sm:hidden">

@@ -4,6 +4,7 @@ import { ContactUsForm } from "@/components/contact-form";
 import FlipText from "@/components/motion/FlipText";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,11 +29,15 @@ const ContactUsPageContent = () => {
 					<div className="flex gap-24">
 						<div>
 							<p className="text-lg font-semibold">Phone</p>
+							<Link href={"tel:+251934898608"}>
 							<FlipText className="text-muted-dark">+251 934 898 608</FlipText>
+							</Link>
 						</div>
 						<div>
 							<p className="text-lg font-semibold">Email</p>
-							<FlipText className="text-muted-dark">endekaluzemenu6@gmail.com</FlipText>
+							<Link href={"mailto:endekaluzemenu6@gmail.com"}>
+								<FlipText className="text-muted-dark">endekaluzemenu6@gmail.com</FlipText>
+							</Link>
 						</div>
 					</div>
 				</div>

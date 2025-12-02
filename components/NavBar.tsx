@@ -118,13 +118,21 @@ const NavBar = () => {
 							</div>
 							<div className="flex flex-row justify-between items-end">
 								<div className="flex flex-col">
-									<FlipText className="text-lg font-semibold">realkal.ez@gmail.com</FlipText>
-									<FlipText className="text-sm text-muted-dark">+251 934 898 608</FlipText>
+									<Link href={"mailto:endekaluzemenu6@gmail.com"}>
+										<FlipText className="text-lg font-semibold">endekaluzemenu6@gmail.com</FlipText>
+									</Link>
+									<Link href={"tel:+251934898608"}>
+										<FlipText className="text-sm text-muted-dark">+251 934 898 608</FlipText>
+									</Link>
 								</div>
 								<div className="hidden md:flex flex-row gap-3">
-									<FlipText className="text-sm">Twitter/X</FlipText>
-									<FlipText className="text-sm">LinkedIn</FlipText>
-									<FlipText className="text-sm">Telegram</FlipText>
+									{/* <FlipText className="text-sm">Twitter/X</FlipText> */}
+									<Link href={"https://linkedin.com/in/endekalu"} target="_blank">
+										<FlipText className="text-sm">LinkedIn</FlipText>
+									</Link>
+									<Link href={"https://t.me/real_kal"} target="_blank">
+										<FlipText className="text-sm">Telegram</FlipText>
+									</Link>
 								</div>
 							</div>
 						</motion.div>

@@ -44,7 +44,7 @@ const LogoMarquee = () => {
 					initial={{ x: 0 }}
 					animate={{ x: "-100%" }}
 					transition={{ duration: 100, ease: "linear", repeat: Infinity }}
-					className="flex items-center justify-between gap-4 flex-shrink-0"
+					className="flex items-center justify-between md:gap-20 flex-shrink-0"
 				>
 					{logos.map((logo, index) => (
 						<Image
