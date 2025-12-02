@@ -22,7 +22,7 @@ const NavBar = () => {
 					<motion.div
 						key={"overlay"}
 						initial={{ opacity: 0 }}
-						animate={{ opacity: 0.5, height: "100%" }}
+						animate={{ opacity: 0.6, height: "100%" }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.3 }}
 						className="fixed inset-0 bg-black z-40 cursor-pointer"
@@ -42,7 +42,7 @@ const NavBar = () => {
 						<Link href={'/'}>
 							<h1 className="text-lg font-medium tracking-tighter">Kalu&reg;</h1>
 						</Link>
-						<p className="text-muted-dark text-sm">{today.toLocaleString("en-US", options)}</p>
+						<p className="text-muted-dark text-sm max-sm:hidden">{today.toLocaleString("en-US", options)}</p>
 					</div>
 
 					<div className="flex-center gap-4">

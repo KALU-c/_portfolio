@@ -3,6 +3,10 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { SplitText } from "gsap/all"
+import Image from "next/image"
+import { motion } from "motion/react"
+
+const AnimatedImage = motion.create(Image)
 
 const Hero = () => {
 	useGSAP(() => {
@@ -35,19 +39,29 @@ const Hero = () => {
 
 	return (
 		<section>
-			<div className="flex flex-col items-center justify-around leading-0 md:min-h-dvh py-28 max-md:py-44">
+			<div className="flex flex-col items-center md:justify-between justify-end leading-0 min-h-dvh py-28 max-md:gap-4">
+				<div className="md:hidden relative h-[550px] w-full overflow-hidden rounded-2xl flex-1 bg-yellow-400">
+					<AnimatedImage
+						src={"/1.png"}
+						className="absolute w-full h-full object-cover"
+						alt="my-img"
+						whileHover={{ scale: 1.1 }}
+						// transition={{ ease: "easeInOut", duration: 0.5 }}
+						fill
+					/>
+				</div>
 				<h1 className="text-[clamp(3rem,15vw,280px)] font-medium leading-none text-primary font-korium name">
 					ENDEKALU ZEMENU
 				</h1>
 
 				<div className="self-center text-center font-medium tracking-tighter flex flex-col text-primary gap-4">
-					<div className="text-3xl text-muted-dark">
+					{/* <div className="text-3xl text-muted-dark">
 						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">Code, </span>
 						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">design, </span>
 						and{" "}
 						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">flow, </span>
 						<span className="text-3xl text-muted-dark">— all in one mind.</span>
-					</div>
+					</div> */}
 
 					<span className="text-muted-dark max-w-4xl desc-2 overflow-hidden">
 						I love turning ideas into things people actually enjoy using. Whether it's designing clean interfaces or writing solid, maintainable code, I care about the little details that make the experience feel smooth and natural.
