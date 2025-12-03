@@ -23,20 +23,34 @@ const ContactUsPageContent = () => {
 				<div className="flex flex-col flex-1 gap-6">
 					<div className="flex flex-col">
 						<h2 className="text-6xl font-semibold tracking-tight">Contact me</h2>
-						<p className="text-lg font-light text-muted-dark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, non?</p>
+						<p className="text-lg font-light text-muted-dark">Feel free to reach out for projects, collaborations, or any questions.</p>
 					</div>
 
-					<div className="flex gap-24">
+					<div className="flex max-md:flex-col md:gap-24">
 						<div>
 							<p className="text-lg font-semibold">Phone</p>
 							<Link href={"tel:+251934898608"}>
-							<FlipText className="text-muted-dark">+251 934 898 608</FlipText>
+								<FlipText className="text-muted-dark">+251 934 898 608</FlipText>
 							</Link>
 						</div>
 						<div>
 							<p className="text-lg font-semibold">Email</p>
 							<Link href={"mailto:endekaluzemenu6@gmail.com"}>
 								<FlipText className="text-muted-dark">endekaluzemenu6@gmail.com</FlipText>
+							</Link>
+						</div>
+					</div>
+					<div className="flex max-md:flex-col md:gap-24">
+						<div>
+							<p className="text-lg font-semibold">Telegram</p>
+							<Link href={"https://t.me/real_kal"} target="_blank">
+								<FlipText className="text-muted-dark">https://t.me/real_kal</FlipText>
+							</Link>
+						</div>
+						<div>
+							<p className="text-lg font-semibold">LinkedIn</p>
+							<Link href={"https://linkedin.com/in/endekalu"} target="_blank">
+								<FlipText className="text-muted-dark">https://linkedin.com/in/endekalu</FlipText>
 							</Link>
 						</div>
 					</div>
