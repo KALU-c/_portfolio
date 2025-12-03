@@ -5,6 +5,9 @@ import gsap from "gsap"
 import { SplitText } from "gsap/all"
 import Image from "next/image"
 import { motion } from "motion/react"
+import { Button, MotionButton } from "../ui/button"
+import { Download } from "lucide-react"
+import Link from "next/link"
 
 const AnimatedImage = motion.create(Image)
 
@@ -35,6 +38,13 @@ const Hero = () => {
 			filter: "blur(16px)",
 			ease: "power1.inOut",
 		})
+
+		gsap.from(".button-div", {
+			y: 100,
+			opacity: 0,
+			filter: "blur(16px)",
+			delay: 0.5
+		})
 	})
 
 	return (
@@ -48,13 +58,14 @@ const Hero = () => {
 						whileHover={{ scale: 1.1 }}
 						// transition={{ ease: "easeInOut", duration: 0.5 }}
 						fill
+						priority
 					/>
 				</div>
 				<h1 className="text-[clamp(3rem,15vw,280px)] font-medium leading-none text-primary font-korium name">
 					ENDEKALU ZEMENU
 				</h1>
 
-				<div className="self-center text-center font-medium tracking-tighter flex flex-col text-primary gap-4">
+				<div className="self-center text-center font-medium tracking-tighter flex flex-col items-center text-primary gap-4">
 					<div className="text-3xl text-muted-dark max-md:hidden">
 						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">Code, </span>
 						<span className="text-[clamp(1.875rem,1.5536rem+1.6071vw,3rem)] font-telma font-medium text-primary">design, </span>
@@ -66,6 +77,17 @@ const Hero = () => {
 					<span className="text-muted-dark max-w-4xl desc-2 overflow-hidden">
 						I love turning ideas into things people actually enjoy using. Whether it's designing clean interfaces or writing solid, maintainable code, I care about the little details that make the experience feel smooth and natural.
 					</span>
+					<div className="button-div">
+						<Link
+							href={"https://raw.githubusercontent.com/KALU-c/files/afb0b8bc9e8b19e426528f4160ad1d4aa835025d/Endekalu_Zemenu_Resume_2025.pdf"}
+							target="_blank"
+						>
+							<MotionButton size={'lg'} className="w-fit">
+								<Download className="mr-2" />
+								Download Resume
+							</MotionButton>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</section>

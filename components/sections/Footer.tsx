@@ -61,6 +61,9 @@ const Footer = () => {
 
 					<div className="flex flex-col gap-1.5">
 						{/* <FlipText className="text-sm">Twitter/X</FlipText> */}
+						<Link href={"https://github.com/KALU-c"} target="_blank">
+							<FlipText className="text-sm">Github</FlipText>
+						</Link>
 						<Link href={"https://linkedin.com/in/endekalu"} target="_blank">
 							<FlipText className="text-sm">LinkedIn</FlipText>
 						</Link>

@@ -2,7 +2,7 @@
 
 import { Button, MotionButton } from "@/components/ui/button";
 import { navItems } from "@/constants/nav-items";
-import { Plus } from "lucide-react";
+import { Github, Plus } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
@@ -35,7 +35,7 @@ const NavBar = () => {
 			</AnimatePresence>
 
 			<motion.nav
-				animate={{ height: isOpen ? (isMobile ? "400px" : "485px" ) : "50px" }}
+				animate={{ height: isOpen ? (isMobile ? "400px" : "485px") : "50px" }}
 				transition={{ ease: "easeInOut", duration: 0.5 }}
 				exit={{ animationDuration: 0.1 }}
 				className="h-[45px] bg-muted/90 backdrop-blur-sm rounded-b-2xl p-[6px] top-0 z-50 fixed inset-0 md:mx-[50px] xl:mx-[180px] flex flex-col justify-between"
@@ -49,8 +49,13 @@ const NavBar = () => {
 					</div>
 
 					<div className="flex-center gap-4">
+						<Link href={'https://github.com/KALU-c'} target="_blank">
+							<Button variant={"ghost"}>
+								<Github />
+							</Button>
+						</Link>
 						<div className="hidden gap-4 md:flex">
-							<AnimatePresence>
+							{/* <AnimatePresence>
 								{!isOpen && (
 									<motion.div
 										initial={{ opacity: 1 }}
@@ -59,10 +64,10 @@ const NavBar = () => {
 										className="flex gap-4"
 									>
 										{/* <MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Projects</MotionButton> */}
-										{/* <MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Blog</MotionButton> */}
-									</motion.div>
-								)}
-							</AnimatePresence>
+							{/* <MotionButton size={"noPadding"} variant={"transparent"} textClassName="text-[14px]">Blog</MotionButton> */}
+							{/* </motion.div> */}
+							{/* )} */}
+							{/* </AnimatePresence> */}
 							<Link href={'/contact'}>
 								<MotionButton textClassName="text-[14px]" className="rounded-full h-7">Contact</MotionButton>
 							</Link>
@@ -133,6 +138,9 @@ const NavBar = () => {
 								</div>
 								<div className="hidden md:flex flex-row gap-3">
 									{/* <FlipText className="text-sm">Twitter/X</FlipText> */}
+									<Link href={'https://github.com/KALU-c'} target="_blank">
+										<FlipText className="text-sm">Github</FlipText>
+									</Link>
 									<Link href={"https://linkedin.com/in/endekalu"} target="_blank">
 										<FlipText className="text-sm">LinkedIn</FlipText>
 									</Link>

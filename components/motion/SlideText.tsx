@@ -34,10 +34,10 @@ const SlideText = ({ text, order, src, description, tools }: SlideTextProps) => 
 					alt="img-1"
 					width={150}
 					height={40}
-					className="absolute left-0 object-cover rounded-md sm:max-h-[60px] max-sm:hidden"
+					className="absolute left-0 object-cover rounded-md sm:max-h-[45px] max-sm:hidden"
 				/>
 				<motion.h2
-					className="sm:text-5xl text-2xl font-semibold tracking-tight z-10 bg-primary rounded-l-sm py-2 line-clamp-1"
+					className="sm:text-4xl text-2xl font-semibold tracking-tight z-10 bg-primary rounded-l-sm py-2 line-clamp-1"
 					variants={{
 						hovered: {
 							x: 170

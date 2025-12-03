@@ -21,13 +21,13 @@ const ProjectCard = ({ title, description, src, year, link }: ProjectCardProps) 
 				animate={isHovered ? "hovered" : "initial"}
 				className="w-full flex-[0.9] rounded-md overflow-hidden relative"
 			>
-				<motion.div 
-				variants={{ 
-					hovered: { scale: 1.05 }, 
-					initial: { scale: 0 } 
-				}} 
-				transition={{ ease: "easeInOut", duration: 0.3 }}
-				className="absolute right-4 top-4 z-100"
+				<motion.div
+					variants={{
+						hovered: { scale: 1.05 },
+						initial: { scale: 0 }
+					}}
+					transition={{ ease: "easeInOut", duration: 0.3 }}
+					className="absolute right-4 top-4 z-100"
 				>
 					<ArrowUpRightFromSquare className="text-[#F77156] size-5" />
 				</motion.div>
@@ -45,6 +45,7 @@ const ProjectCard = ({ title, description, src, year, link }: ProjectCardProps) 
 							}
 						}}
 						transition={{ ease: "easeInOut", duration: 0.5 }}
+						fetchPriority="high"
 					/>
 				</Link>
 			</motion.div>

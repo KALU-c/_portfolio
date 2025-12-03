@@ -32,7 +32,7 @@ const Process = () => {
 			<div className="flex flex-col">
 				<div className="flex flex-row items-center justify-between">
 					<p className="text-lg">/Process</p>
-					<span className="text-muted-dark">(04)</span>
+					<span className="text-muted-dark max-md:hidden">(04)</span>
 				</div>
 
 				<div className="flex md:flex-row flex-col justify-between py-10 gap-20">

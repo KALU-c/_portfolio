@@ -117,7 +117,7 @@ const AboutMe = () => {
 						About Me
 					</h1>
 
-					<p className="text-lg text-muted-dark animate-text animate-about-me-text">(02)</p>
+					<p className="text-lg text-muted-dark animate-text animate-about-me-text max-md:hidden">(02)</p>
 				</div>
 				<div className="overflow-hidden">
 					<p className="text-muted-dark animate-about-me-text text-start">

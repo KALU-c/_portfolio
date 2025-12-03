@@ -18,7 +18,7 @@ const ContactPage = () => {
 
 const ContactUsPageContent = () => {
 	return (
-		<div className="flex flex-col lg:flex-row justify-between gap-16 w-full">
+		<div className="flex flex-col lg:flex-row justify-between gap-16 w-full py-28">
 			<div className="lg:flex-1 flex flex-col gap-10">
 				<div className="flex flex-col flex-1 gap-6">
 					<div className="flex flex-col">

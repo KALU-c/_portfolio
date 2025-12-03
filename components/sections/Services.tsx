@@ -3,6 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import SlideText from "../motion/SlideText";
 import { MotionButton } from "../ui/button";
+import Link from "next/link";
 
 const slideTexts = [
 	{
@@ -65,13 +66,15 @@ const Services = () => {
 						))}
 					</div>
 
-					<MotionButton
-						size={'lg'}
-						className="self-start bg-background text-primary hover:bg-background/90 rounded-full md:h-14 text-xl"
-					>
-						<span className="text-xl">Contact</span>
-						<ArrowUpRight className="ml-2" />
-					</MotionButton>
+					<Link href={'/contact'}>
+						<MotionButton
+							size={'lg'}
+							className="self-start bg-background text-primary hover:bg-background/90 rounded-full md:h-14 text-xl"
+						>
+							<span className="text-xl">Contact</span>
+							<ArrowUpRight className="ml-2" />
+						</MotionButton>
+					</Link>
 				</div>
 			</div>
 		</section>

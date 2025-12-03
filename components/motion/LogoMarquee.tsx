@@ -50,7 +50,7 @@ const LogoMarquee = () => {
 						<Image
 							src={logo}
 							alt={`${logo}-${index}`}
-							className="max-md:h-6 max-md:w-6 h-8 w-8 mr-10 sepia opacity-70 md:opacity-40"
+							className="max-md:h-6 max-md:w-6 h-8 w-8 mr-10 sepia opacity-70"
 							width={50}
 							height={50}
 							key={index}

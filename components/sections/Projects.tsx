@@ -12,7 +12,7 @@ const Projects = () => {
 				trigger: '.projects-container',
 				scrub: true,
 				start: 'top 90%',
-				end: 'top 55%'
+				end: 'top 75%'
 			},
 			y: 200,
 			duration: 0.5,
@@ -25,14 +25,14 @@ const Projects = () => {
 		<section id="projects" className="flex flex-col gap-2 md:px-10 md:py-40 py-24 projects-container">
 			<div className="overflow-hidden flex flex-col">
 				<div className="overflow-hidden flex flex-row items-end justify-between">
-					<h1 className="text-[clamp(3rem,2.5714rem+2.1429vw,4.5rem)] font-korium font-light leading-none md:animate-text h-fit text-center sm:text-start">
+					<h1 className="text-[clamp(3rem,2.5714rem+2.1429vw,4.5rem)] font-korium font-light leading-none animate-text h-fit text-center sm:text-start">
 						Selected Projects
 					</h1>
 
 					<p className="text-lg text-muted-dark animate-text max-md:hidden">(01)</p>
 				</div>
 				<div className="overflow-hidden flex flex-row justify-between">
-					<p className="text-muted-dark md:animate-text text-start">
+					<p className="text-muted-dark animate-text text-start">
 						A selection of projects that show my focus on simple, purposeful design with meaningful details.
 					</p>
 				</div>
