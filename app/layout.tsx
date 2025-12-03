@@ -6,6 +6,7 @@ import "./globals.css";
 
 const BricolageGrotesqueSans = Bricolage_Grotesque({
   variable: "--font-bricolage-sans",
+  preload: true
 })
 
 const koriumSans = localFont({
@@ -15,7 +16,8 @@ const koriumSans = localFont({
 
 const telmaSans = localFont({
   variable: "--font-telma",
-  src: "../public/fonts/Telma-Variable.ttf"
+  src: "../public/fonts/Telma-Variable.ttf",
+  preload: true
 })
 
 export const metadata: Metadata = {
