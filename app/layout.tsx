@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <Lenis>
         <body
-          className={`${BricolageGrotesqueSans.variable} ${koriumSans.variable} ${telmaSans.variable} font-sans antialiased`}
+          className={`${BricolageGrotesqueSans.className} ${koriumSans.variable} ${telmaSans.variable} font-sans antialiased`}
         >
           {children}
         </body>
