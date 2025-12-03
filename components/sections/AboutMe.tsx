@@ -129,7 +129,7 @@ const AboutMe = () => {
 			<div className="md:py-10 py-2 flex sm:flex-row flex-col gap-10">
 				<div className="hidden sm:block relative h-[500px] max-w-[450px] overflow-hidden rounded-2xl flex-1">
 					<AnimatedImage
-						src={"/1.png"}
+						src={"https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg"}
 						className="absolute w-full h-full object-cover animate-img"
 						alt="my-img"
 						whileHover={{ scale: 1.1 }}
@@ -142,7 +142,7 @@ const AboutMe = () => {
 					<div className="flex flex-col gap-4">
 						{/* <h1 className="text-4xl font-medium tracking-tighter about-me-name">Endekalu Zemenu - <span className="font-medium text-xl tracking-wider text-muted-dark">Fullstack Developer</span></h1> */}
 						<p className="md:text-lg md:pr-20 text-muted-dark about-me-desc">
-							I&apos;m a full stack developer who enjoys building interfaces that feel effortless to use. I care about clean code, smooth interactions, and making sure every detail has a reason to exist. I mostly work with React, Next.js, and NestJS, and I love projects that balance design and logic. When I&apos;m not coding, I&apos;m probably experimenting with animations, experimenting with animations, trying new tools, or figuring out how to make tech feel less like tech.
+							I&apos;m a full stack developer who enjoys building interfaces that feel effortless to use. I care about clean code, smooth interactions, and making sure every detail has a reason to exist. I mostly work with React, Next.js, and NestJS, and I love projects that balance design and logic. When I&apos;m not coding, I&apos;m probably experimenting with animations, trying new tools, or figuring out how to make tech feel less like tech.
 						</p>
 					</div>
 

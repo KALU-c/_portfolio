@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 import FlipText, { FlipMultipleText } from "./motion/FlipText";
 import { useIsMobile } from "@/hooks/use-mobile";
+import Image from "next/image";
 
 const NavBar = () => {
 	const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', hour12: true }
@@ -111,9 +112,12 @@ const NavBar = () => {
 									<div className="absolute inset-0 bg-black opacity-30 z-10" />
 
 									{/* Background image */}
-									<img
+									<Image
 										src="https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg"
 										className="absolute inset-0 w-full h-full object-cover"
+										height={300}
+										width={700}
+										alt="r-image"
 									/>
 								</div>
 

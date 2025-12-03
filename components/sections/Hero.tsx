@@ -42,7 +42,7 @@ const Hero = () => {
 			<div className="flex flex-col items-center md:justify-between justify-end leading-0 min-h-dvh py-28 max-md:gap-4">
 				<div className="md:hidden relative h-[550px] w-full overflow-hidden rounded-2xl flex-1">
 					<AnimatedImage
-						src={"/1.png"}
+						src={"https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg"}
 						className="absolute w-full h-full object-cover"
 						alt="my-img"
 						whileHover={{ scale: 1.1 }}

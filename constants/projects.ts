@@ -9,38 +9,38 @@ export const projects: ProjectCardProps[] = [
 		link: "https://cher.et"
 	},
 	{
-		title: "Study Buddy App",
-		description: "Global study group app.",
-		src: "https://framerusercontent.com/images/pPk4LzlQQcnV8kGuwN1eECaNjU.jpeg",
+		title: "Link & QR Generator",
+		description: "Generate short links and QR codes instantly.",
+		src: "/projects/urlpix-2.png",
+		year: 2024,
+		link: "https://urlpix.vercel.app"
+	},
+	{
+		title: "VisionPad",
+		description: "A modern, offline-first whiteboard desktop app built with Tauri.",
+		src: "/projects/visionpad.png",
 		year: 2025,
-		link: "#"
+		link: "https://github.com/KALU-c/vision-pad"
+	},
+	{
+		title: "EasyPay",
+		description: "A TypeScript/JavaScript client for integrating Chapa, Telebirr, M-Pesa, and CBE Birr payments with ease.",
+		src: "/projects/easypay.png",
+		year: 2025,
+		link: "https://github.com/KALU-c/easy-pay"
+	},
+	{
+		title: "Telegram Bot Template Generator",
+		description: "Send a photo and instantly get it styled with a custom template.",
+		src: "/projects/template-generator.png",
+		year: 2024,
+		link: "https://t.me/gubznaye_bot"
 	},
 	{
 		title: "Lambadina Mentorship",
 		description: "Mentorship booking tool.",
-		src: "https://framerusercontent.com/images/f5hnkMJ0Zopso5x73vo23GGXqtE.jpeg",
+		src: "/projects/lambadina.png",
 		year: 2024,
-		link: "#"
+		link: "https://lambadina.net"
 	},
-	{
-		title: "QR Menu System",
-		description: "QR-based food ordering.",
-		src: "https://framerusercontent.com/images/rfLNhHFuJhYpYHvFvLo4BBtc28.jpeg",
-		year: 2024,
-		link: "#"
-	},
-	{
-		title: "Expense Tracker",
-		description: "Track personal spending.",
-		src: "https://framerusercontent.com/images/5kNUmhUBJmuCB1v9i0qUhALWVaI.jpeg",
-		year: 2023,
-		link: "#"
-	},
-	{
-		title: "Next Deploy CLI",
-		description: "Deploy Next.js faster.",
-		src: "https://framerusercontent.com/images/jWx2p419irGE3zmic9VtBjwVUY.jpeg",
-		year: 2025,
-		link: "#"
-	}
 ];

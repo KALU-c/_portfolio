@@ -7,42 +7,42 @@ import { MotionButton } from "../ui/button";
 const slideTexts = [
 	{
 		order: 1,
-		src: "/1.png",
+		src: "https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg",
 		text: "Web Development",
 		tools: ["Next.js", "Tailwind CSS", "React", "TypeScript", "Javascript"],
 		description: "I build fast, responsive websites that feel great to use and are easy to maintain, from landing pages to full-stack apps."
 	},
 	{
 		order: 2,
-		src: "/1.png",
+		src: "https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg",
 		text: "App Development",
 		tools: ["React Native (Expo)", "NestJS", "PostgreSQL", "Firebase", "Stripe"],
 		description: "I create mobile apps that run smoothly on any device. Whether it's a simple MVP or a full product, I focus on speed, usability, and clean architecture."
 	},
 	{
 		order: 3,
-		src: "/1.png",
+		src: "https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg",
 		text: "UI/UX Design",
 		tools: ["Figma", "Tailwind CSS", "GSAP", "Motion/Framer Motion", "Lottie"],
 		description: "I design clean, user-friendly interfaces that feel intuitive and look great. It's all about solving problems with thoughtful design."
 	},
 	{
 		order: 4,
-		src: "/1.png",
+		src: "https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg",
 		text: "Backend Development",
 		tools: ["NestJS", "PostgreSQL", "Prisma", "Supabase", "Node.js"],
 		description: "I build reliable and scalable backend systems with clean architecture, secure APIs, and efficient database design."
 	},
 	{
 		order: 5,
-		src: "/1.png",
+		src: "https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg",
 		text: "DevOps & Deployment",
 		tools: ["Docker", "Vercel", "Railway", "Fly.io", "GitHub Actions"],
 		description: "I handle deployment pipelines, containerization, and continuous integration to keep projects running smoothly and efficiently."
 	},
 	{
 		order: 6,
-		src: "/1.png",
+		src: "https://framerusercontent.com/images/7P2v0b7fdEwf2A2lE1d37Fu8c.jpeg",
 		text: "System Architecture",
 		tools: ["Redis", "Socket.io", "BullMQ", "Microservices", "PostGIS"],
 		description: "I design scalable architectures capable of handling real-time data, background jobs, and large user bases with high performance."
