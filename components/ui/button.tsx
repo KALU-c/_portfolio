@@ -84,7 +84,7 @@ function MotionButton({
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     >
-      <div className="relative overflow-hidden h-fit inset-0 pb-1">
+      <div className="relative overflow-hidden h-fit inset-0">
         <motion.div
           variants={{
             initial: { y: 0 },
