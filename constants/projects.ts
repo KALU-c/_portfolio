@@ -11,7 +11,7 @@ export const projects: ProjectCardProps[] = [
 	{
 		title: "Link & QR Generator",
 		description: "Generate short links and QR codes instantly.",
-		src: "/projects/urlpix-2.png",
+		src: "/projects/urlpix.png",
 		year: 2024,
 		link: "https://urlpix.vercel.app"
 	},

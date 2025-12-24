@@ -27,9 +27,9 @@ const ProjectCard = ({ title, description, src, year, link }: ProjectCardProps) 
 						initial: { scale: 0 }
 					}}
 					transition={{ ease: "easeInOut", duration: 0.3 }}
-					className="absolute right-4 top-4 z-100"
+					className="absolute right-4 top-4 z-51"
 				>
-					<ArrowUpRightFromSquare className="text-[#F77156] size-5" />
+					<ArrowUpRightFromSquare className="text-white size-5" />
 				</motion.div>
 				<Link href={link} target="_blank">
 					<motion.img
@@ -45,7 +45,7 @@ const ProjectCard = ({ title, description, src, year, link }: ProjectCardProps) 
 							}
 						}}
 						transition={{ ease: "easeInOut", duration: 0.5 }}
-						fetchPriority="high"
+						// fetchPriority="high"
 					/>
 				</Link>
 			</motion.div>

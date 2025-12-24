@@ -38,7 +38,7 @@ const NavBar = () => {
 				animate={{ height: isOpen ? (isMobile ? "400px" : "485px") : "50px" }}
 				transition={{ ease: "easeInOut", duration: 0.5 }}
 				exit={{ animationDuration: 0.1 }}
-				className="h-[45px] bg-muted/90 backdrop-blur-sm rounded-b-2xl p-[6px] top-0 z-50 fixed inset-0 md:mx-[50px] xl:mx-[180px] flex flex-col justify-between"
+				className="h-[45px] bg-muted/90 backdrop-blur-sm rounded-b-2xl p-[6px] top-0 z-100 fixed inset-0 md:mx-[50px] xl:mx-[180px] flex flex-col justify-between"
 			>
 				<div className="flex-between">
 					<div className="flex-center gap-2 px-2">
