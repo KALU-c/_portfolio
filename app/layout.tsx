@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const BricolageGrotesqueSans = Bricolage_Grotesque({
   variable: "--font-bricolage-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
           className={`${BricolageGrotesqueSans.className} ${koriumSans.variable} ${telmaSans.variable} font-sans antialiased`}
         >
           {children}
+          <Toaster richColors invert />
         </body>
       </Lenis>
     </html>
