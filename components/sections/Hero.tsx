@@ -5,7 +5,7 @@ import gsap from "gsap"
 import { SplitText } from "gsap/all"
 import Image from "next/image"
 import { motion } from "motion/react"
-import { Button, MotionButton } from "../ui/button"
+import { MotionButton } from "../ui/button"
 import { Download } from "lucide-react"
 import Link from "next/link"
 
