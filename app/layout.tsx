@@ -4,6 +4,7 @@ import { Bricolage_Grotesque } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next"
 
 const BricolageGrotesqueSans = Bricolage_Grotesque({
   variable: "--font-bricolage-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
         >
           {children}
           <Toaster richColors invert />
+          <Analytics />
         </body>
       </Lenis>
     </html>
